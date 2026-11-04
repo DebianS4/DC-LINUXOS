@@ -35,6 +35,19 @@ sha256sum -c live-image-amd64.hybrid.iso.sha256
 
 En Windows, puedes reconstruirla desde Símbolo del sistema con `copy /b live-image-amd64.hybrid.iso.part00+live-image-amd64.hybrid.iso.part01 live-image-amd64.hybrid.iso`.
 
+## Sitio web de DC-LINUX
+
+La landing visual del proyecto está en [`website/`](website/). Usa una identidad azul y negra inspirada en el escritorio Núcleo XFCE, con secciones sobre el sistema, características, galería y enlaces a las releases y al código fuente.
+
+Para verla localmente:
+
+```sh
+cd website
+npm start
+```
+
+Después abre `http://localhost:3000`.
+
 ## Alcance de verificación
 
 La compilación en CI o contenedores puede fallar si el entorno prohíbe montajes, namespaces o `chroot`. Antes de distribuir la imagen, arrancarla en una máquina virtual y comprobar red, Wi-Fi, audio, gráficos e instalación en hardware real.
