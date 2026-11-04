@@ -66,3 +66,30 @@ La compilación puede fallar en CI o contenedores que bloqueen montajes, espacio
 
 - [Repositorio del proyecto](https://github.com/DebianS4/DC-LINUXOS)
 - [Release Núcleo Linux 1.0](https://github.com/DebianS4/DC-LINUXOS/releases/tag/nucleo-2026-11-04)
+
+## Raspberry Pi — imagen OBD-II Lite
+
+[**Descargar la imagen Raspberry Pi OBD-II Lite**](https://github.com/DebianS4/DC-LINUXOS/releases/tag/dcecu-pi-zero-w-lite-v1.0.0) · [Archivo `.img.xz`](https://github.com/DebianS4/DC-LINUXOS/releases/download/dcecu-pi-zero-w-lite-v1.0.0/DC-ECU-PiZeroW-Lite.img.xz) · [Checksum SHA-256](https://github.com/DebianS4/DC-LINUXOS/releases/download/dcecu-pi-zero-w-lite-v1.0.0/DC-ECU-PiZeroW-Lite.img.xz.sha256)
+
+Esta imagen es para **Raspberry Pi Zero W 1.1** y se puede seleccionar directamente en Raspberry Pi Imager mediante **Choose OS → Use custom** (o **Elegir SO → Usar imagen personalizada**). La imagen es distinta de la ISO de escritorio Núcleo Linux para equipos amd64; cada una tiene su propia Release.
+
+| Especificación | Detalle |
+|---|---|
+| Sistema base | Raspberry Pi OS Lite, 32 bits (armhf) |
+| Pantalla | MHS SPI de 3,5 pulgadas, 480×320; overlay `waveshare35a` |
+| Panel | Una sola vista OBD-II en la pantalla y en el panel web local |
+| Bluetooth | Búsqueda persistente, selección y reconexión automática del ELM327 |
+| Wi-Fi local | Punto de acceso `DC-ECU`; clave predeterminada `4321ucecd` |
+| Panel web | `http://192.168.4.1` al conectarse al punto de acceso |
+| Archivo | `DC-ECU-PiZeroW-Lite.img.xz`, 642 MiB comprimida (aprox. 3,01 GiB descomprimida) |
+| Partición raíz | 2,5 GiB, con expansión automática al primer arranque |
+
+Descarga también el archivo `.sha256` y verifica la imagen desde la misma carpeta:
+
+```sh
+sha256sum -c DC-ECU-PiZeroW-Lite.img.xz.sha256
+```
+
+**Aviso de seguridad:** la clave predeterminada `4321ucecd` queda pública junto con la imagen. Cámbiala antes de usar el punto de acceso fuera de pruebas.
+
+Se verificaron la compresión, el checksum y la estructura de la imagen; **no se ha probado en hardware Raspberry Pi físico**.
