@@ -66,6 +66,7 @@ La compilación puede fallar en CI o contenedores que bloqueen montajes, espacio
 
 - [Repositorio del proyecto](https://github.com/DebianS4/DC-LINUXOS)
 - [Release Núcleo Linux 1.0](https://github.com/DebianS4/DC-LINUXOS/releases/tag/nucleo-2026-11-04)
+- [Sitio web de DC-LINUX](https://debians4.github.io/DC-LINUXOS/)
 
 ## Raspberry Pi
 
