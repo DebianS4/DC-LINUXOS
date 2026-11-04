@@ -1,0 +1,30 @@
+#!/bin/sh
+set -eu
+
+wallpaper=/usr/share/backgrounds/nucleo/nucleo-wallpaper.png
+[ -r "$wallpaper" ] || exit 0
+command -v xfconf-query >/dev/null 2>&1 || exit 0
+
+# Wait briefly for XFCE to expose its backdrop properties in this session.
+tries=0
+properties=""
+while [ "$tries" -lt 15 ]; do
+    properties=$(xfconf-query -c xfce4-desktop -l 2>/dev/null || true)
+    [ -n "$properties" ] && break
+    tries=$((tries + 1))
+    sleep 1
+done
+
+printf '%s\n' "$properties" | while IFS= read -r property; do
+    case "$property" in
+        /backdrop/*/last-image|/backdrop/*/image-path)
+            xfconf-query -c xfce4-desktop -p "$property" --set "$wallpaper" >/dev/null 2>&1 || true
+            ;;
+        /backdrop/*/image-show)
+            xfconf-query -c xfce4-desktop -p "$property" --set true >/dev/null 2>&1 || true
+            ;;
+        /backdrop/*/image-style|/backdrop/*/workspace*/image-style)
+            xfconf-query -c xfce4-desktop -p "$property" --set 5 >/dev/null 2>&1 || true
+            ;;
+    esac
+done

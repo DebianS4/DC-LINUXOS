@@ -1,0 +1,20 @@
+# Artefactos de live-build
+/.build/
+/binary/
+/cache/
+/chroot/
+/binary.modified_timestamps
+/binary.sh
+/chroot.files
+/chroot.packages.install
+/chroot.packages.live
+/live-image-amd64.contents
+/live-image-amd64.files
+/live-image-amd64.packages
+/live-image-amd64.hybrid.iso
+/live-image-amd64.hybrid.iso.*
+
+# Archivos temporales locales
+__pycache__/
+*.py[cod]
+.DS_Store

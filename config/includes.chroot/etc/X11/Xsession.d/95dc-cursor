@@ -1,0 +1,4 @@
+#!/bin/sh
+# DC-LINUX-OS cursor overlay: keep this in the session environment, not /etc/environment.
+export XCURSOR_THEME=DC-Red-Luminous
+export XCURSOR_SIZE=32

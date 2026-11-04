@@ -1,0 +1,26 @@
+# Núcleo Linux 1.0 — Debian 13 Trixie, XFCE ligero
+linux-image-amd64
+live-boot
+live-config
+live-config-systemd
+xfce4
+xfce4-terminal
+thunar
+thunar-volman
+network-manager
+network-manager-gnome
+lightdm
+lightdm-gtk-greeter
+firefox-esr
+mousepad
+ristretto
+file-roller
+pavucontrol
+sudo
+curl
+ca-certificates
+nano
+less
+firmware-linux
+fonts-dejavu-core
+fonts-liberation

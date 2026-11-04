@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Núcleo desktop wallpaper
+Comment=Apply the Núcleo default wallpaper to active workspaces
+Exec=/usr/local/bin/dc-set-wallpaper
+OnlyShowIn=XFCE;
+NoDisplay=true
+X-GNOME-Autostart-enabled=true

@@ -1,0 +1,9 @@
+#!/bin/sh
+set -eu
+
+cat > /etc/issue <<'EOF'
+Núcleo Linux 1.0 — Debian 13 (Trixie) con XFCE\n
+EOF
+cat > /etc/motd <<'EOF'
+Núcleo Linux 1.0 — una edición ligera de Debian 13 con XFCE.
+EOF
