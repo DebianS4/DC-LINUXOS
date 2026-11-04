@@ -158,3 +158,52 @@ h1, h2, h3, p { margin-top: 0; }.hero h1 { margin: 0; font: 500 clamp(58px, 8.1v
   .pi-download-card:last-child { grid-column: auto; }
   .pi-download-card h4 { font-size: 20px; }
 }
+
+
+/* Guías de instalación para las dos imágenes publicadas */
+.pi-download-status.is-available { color: #8de1c3; }
+.pi-download-status.is-available > span { background: #69e0b7; box-shadow: 0 0 10px rgba(105, 224, 183, .38); }
+.pi-download-button.is-available { display: flex; align-items: center; justify-content: center; gap: 8px; border-color: var(--blue); background: var(--blue); color: #031020; cursor: pointer; opacity: 1; text-decoration: none; }
+.pi-download-button.is-available:hover, .pi-download-button.is-available:focus-visible { border-color: var(--cyan); background: var(--cyan); }
+
+.guide-section { padding-top: 120px; padding-bottom: 132px; background: #07101f; }
+.guide-heading { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin: 60px 0 48px; }
+.guide-heading h2 { margin: 0; font: 500 clamp(42px, 5.6vw, 78px)/.97 var(--display); letter-spacing: -.065em; }
+.guide-heading h2 span { color: var(--blue-bright); }
+.guide-heading > p { max-width: 390px; margin: 0 3% 5px 0; color: var(--muted); font-size: 14px; line-height: 1.75; }
+.guide-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 17px; align-items: stretch; }
+.guide-card { display: flex; flex-direction: column; min-width: 0; padding: clamp(20px, 2.8vw, 34px); border: 1px solid rgba(158, 201, 255, .2); background: linear-gradient(145deg, rgba(11, 21, 38, .96), rgba(3, 7, 14, .98)); box-shadow: 0 22px 64px rgba(0, 0, 0, .2); }
+.guide-index { margin: 0 0 17px; color: var(--cyan); font: 9px var(--mono); letter-spacing: .12em; }
+.guide-card h3 { margin: 0 0 12px; font: 500 clamp(25px, 2.6vw, 34px)/1.1 var(--display); letter-spacing: -.05em; }
+.guide-summary { margin: 0 0 19px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.guide-release-link, .guide-secondary-link { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; padding: 12px 13px; border: 1px solid rgba(91, 196, 255, .42); color: var(--cyan); font: 600 9px/1.5 var(--mono); }
+.guide-release-link { margin-bottom: 17px; background: rgba(18, 59, 98, .32); }
+.guide-release-link:hover, .guide-release-link:focus-visible, .guide-secondary-link:hover, .guide-secondary-link:focus-visible { border-color: var(--blue-bright); background: rgba(18, 59, 98, .55); color: var(--white); }
+.guide-release-links { display: grid; gap: 8px; margin-bottom: 17px; }
+.guide-release-links .guide-release-link { margin: 0; }
+.guide-secondary-link { padding-top: 9px; padding-bottom: 9px; border-color: rgba(158, 201, 255, .19); color: #aabbd0; }
+.guide-steps { display: grid; gap: 15px; margin: 0 0 24px; padding-left: 23px; color: var(--muted); font-size: 11px; line-height: 1.75; }
+.guide-steps li { padding-left: 4px; overflow-wrap: anywhere; }
+.guide-steps li::marker { color: var(--blue-bright); font: 600 10px var(--mono); }
+.guide-steps strong { color: var(--white); font-weight: 600; }
+.guide-steps li > code, .guide-hash code { padding: 2px 4px; border: 1px solid rgba(158, 201, 255, .15); background: rgba(3, 8, 16, .72); color: #c8eaff; font: 9px var(--mono); overflow-wrap: anywhere; }
+.guide-code { display: block; max-width: 100%; margin: 9px 0; padding: 10px 11px; overflow-x: auto; border: 1px solid rgba(158, 201, 255, .14); background: #03070d; color: var(--cyan); font: 9px/1.65 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; }
+.guide-hash { display: block; margin-top: 8px; color: #849ab2; font-size: 9px; }
+.guide-warning { margin: auto 0 0; padding: 11px 13px; border-left: 2px solid var(--red); background: rgba(255, 53, 90, .06); color: #aab8ca; font-size: 10px; line-height: 1.65; }
+@media (max-width: 900px) {
+  .guide-heading { align-items: flex-start; }
+  .guide-grid { grid-template-columns: 1fr; }
+  .guide-card { padding: 27px; }
+}
+@media (max-width: 650px) {
+  .guide-section { padding-top: 86px; padding-bottom: 90px; }
+  .guide-heading { display: block; margin: 45px 0 32px; }
+  .guide-heading h2 { font-size: clamp(40px, 12vw, 62px); }
+  .guide-heading > p { margin: 20px 0 0; font-size: 13px; }
+  .guide-grid { gap: 12px; }
+  .guide-card { padding: 19px; }
+  .guide-card h3 { font-size: 27px; }
+  .guide-steps { gap: 13px; padding-left: 20px; font-size: 11px; }
+  .guide-code { font-size: 8px; }
+  .guide-warning { margin-top: 0; }
+}

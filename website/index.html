@@ -25,6 +25,7 @@
         <a href="#sistema">El sistema</a>
         <a href="#caracteristicas">Características</a>
         <a href="#entorno">Entorno</a>
+        <a href="#guias">Guías</a>
         <a href="#raspberry-pi">Raspberry Pi</a>
         <a class="nav-cta" href="https://github.com/DebianS4/DC-LINUXOS" target="_blank" rel="noreferrer">Ver código <span aria-hidden="true">↗</span></a>
       </nav>
@@ -40,7 +41,7 @@
           <p class="hero-lede">DC-LINUX toma la potencia de Debian, la ligereza de XFCE y una identidad visual propia para que tu escritorio empiece a sentirse tuyo desde el primer arranque.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#sistema">Explorar DC-LINUX <span aria-hidden="true">↓</span></a>
-            <a class="button button-ghost" href="https://github.com/DebianS4/DC-LINUXOS/releases/latest" target="_blank" rel="noreferrer">Descargar ISO <span aria-hidden="true">↗</span></a>
+            <a class="button button-ghost" href="#guias">Guías de descarga <span aria-hidden="true">↓</span></a>
           </div>
           <div class="hero-specs" aria-label="Especificaciones rápidas">
             <div><strong>01</strong><span>Debian 13<br />Trixie</span></div>
@@ -157,13 +158,13 @@
               <p class="pi-download-label">DC-LINUX / IMÁGENES PARA RASPBERRY PI</p>
               <h3 id="pi-download-title">Descargas<br /><span>por modelo.</span></h3>
             </div>
-            <p>Aún no hay imágenes publicadas para estas placas. Habilitaremos cada descarga después de compilar y probar su archivo correspondiente.</p>
+            <p>Ya está publicada la imagen para Raspberry Pi Zero W 1.1. Consulta la guía antes de grabarla; las ediciones para Pi 4 y Pi 5 siguen en evaluación.</p>
           </div>
           <div class="pi-download-grid">
             <article class="pi-download-card">
-              <p class="pi-download-status is-building"><span aria-hidden="true"></span>EN CONSTRUCCIÓN</p>
+              <p class="pi-download-status is-available"><span aria-hidden="true"></span>IMAGEN DISPONIBLE</p>
               <h4>Edición especial para Raspberry Pi Zero W 1.1.</h4>
-              <button class="pi-download-button" type="button" disabled>Descarga próximamente</button>
+              <a class="pi-download-button is-available" href="https://github.com/DebianS4/DC-LINUXOS/releases/tag/dcecu-pi-zero-w-lite-v1.0.0" target="_blank" rel="noopener noreferrer">Ver imagen y checksum <span aria-hidden="true">↗</span></a>
             </article>
             <article class="pi-download-card">
               <p class="pi-download-status is-evaluating"><span aria-hidden="true"></span>EVALUACIÓN PENDIENTE</p>
@@ -181,12 +182,54 @@
         </div>
       </section>
 
+      <section class="guide-section section-pad" id="guias" aria-labelledby="guide-title">
+        <div class="section-heading-row">
+          <div class="section-kicker"><span>06</span><span class="rule"></span><span>DESCARGA / INSTALACIÓN</span></div>
+          <p class="section-note">Dos imágenes.<br />Pasos claros.</p>
+        </div>
+        <div class="guide-heading reveal">
+          <h2 id="guide-title">Elige tu equipo.<br /><span>Sigue la guía.</span></h2>
+          <p>Descarga desde las releases oficiales, comprueba la integridad y prepara el medio de arranque correspondiente.</p>
+        </div>
+        <div class="guide-grid">
+          <article class="guide-card reveal" aria-labelledby="guide-pc-title">
+            <p class="guide-index">01 / PC · AMD64 · BIOS + UEFI</p>
+            <h3 id="guide-pc-title">Núcleo Linux para PC</h3>
+            <p class="guide-summary">ISO híbrida basada en Debian 13 y XFCE. Como cada archivo tiene un límite de tamaño, la ISO se descarga en dos partes.</p>
+            <a class="guide-release-link" href="https://github.com/DebianS4/DC-LINUXOS/releases/tag/nucleo-2026-11-04" target="_blank" rel="noopener noreferrer">Abrir release y descargar los 3 archivos <span aria-hidden="true">↗</span></a>
+            <ol class="guide-steps">
+              <li><strong>Descarga las dos partes y el checksum.</strong> Guarda juntos <code>live-image-amd64.hybrid.iso.part00</code>, <code>live-image-amd64.hybrid.iso.part01</code> y <code>live-image-amd64.hybrid.iso.sha256</code>.</li>
+              <li><strong>Une y verifica la ISO</strong> desde esa carpeta con Linux, macOS o WSL:<code class="guide-code">cat live-image-amd64.hybrid.iso.part00 live-image-amd64.hybrid.iso.part01 &gt; live-image-amd64.hybrid.iso</code>Comprueba el checksum con <code>sha256sum -c live-image-amd64.hybrid.iso.sha256</code> en Linux/WSL o <code>shasum -a 256 -c live-image-amd64.hybrid.iso.sha256</code> en macOS.<span class="guide-hash">SHA-256 esperado: <code>94e3e87f82210501c812ad7a3b062ff6620eee5e56c07cdf192542463b9d9e47</code></span></li>
+              <li><strong>Graba la ISO en una memoria USB</strong> con una herramienta de escritura de imágenes. Reinicia el PC, elige arrancar desde USB y prueba la sesión Live o inicia el instalador.</li>
+            </ol>
+            <p class="guide-warning">La grabación borra la unidad USB seleccionada. Revisa dos veces el destino antes de escribir.</p>
+          </article>
+
+          <article class="guide-card reveal" aria-labelledby="guide-pi-title">
+            <p class="guide-index">02 / RASPBERRY PI ZERO W 1.1</p>
+            <h3 id="guide-pi-title">DC-ECU OBD-II Lite</h3>
+            <p class="guide-summary">Imagen comprimida para la Pi Zero W 1.1, prevista para pantalla de 3,5 pulgadas (480 × 320), Wi‑Fi y Bluetooth con adaptador ELM327.</p>
+            <div class="guide-release-links">
+              <a class="guide-release-link" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/dcecu-pi-zero-w-lite-v1.0.0/DC-ECU-PiZeroW-Lite.img.xz" target="_blank" rel="noopener noreferrer">Descargar imagen .img.xz <span aria-hidden="true">↗</span></a>
+              <a class="guide-secondary-link" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/dcecu-pi-zero-w-lite-v1.0.0/DC-ECU-PiZeroW-Lite.img.xz.sha256" target="_blank" rel="noopener noreferrer">Checksum SHA-256 <span aria-hidden="true">↗</span></a>
+            </div>
+            <ol class="guide-steps">
+              <li><strong>Descarga la imagen y su checksum.</strong> Comprueba el archivo en Linux con:<code class="guide-code">sha256sum -c DC-ECU-PiZeroW-Lite.img.xz.sha256</code></li>
+              <li><strong>Descomprime la imagen</strong> con <code>xz -dk DC-ECU-PiZeroW-Lite.img.xz</code> (en Windows puedes usar 7-Zip). El resultado es <code>DC-ECU-PiZeroW-Lite.img</code>.</li>
+              <li><strong>Graba el archivo .img en una microSD</strong> con Raspberry Pi Imager u otra herramienta de imágenes. Inserta la tarjeta y conecta la pantalla de 3,5 pulgadas antes de encender la Pi.</li>
+              <li><strong>Conecta la Pi por Wi‑Fi</strong> para acceder al equipo. Mantén Bluetooth activo para detectar y emparejar el ELM327; vuelve a conectarlo desde Bluetooth si hace falta.</li>
+            </ol>
+            <p class="guide-warning">Grabar la imagen borra la microSD seleccionada. Necesitas una Pi Zero W 1.1, pantalla compatible y adaptador ELM327 Bluetooth (no incluido).</p>
+          </article>
+        </div>
+      </section>
+
       <section class="final-cta section-pad" aria-labelledby="cta-title">
-        <div class="cta-grid"><div class="cta-number">DC<br /><span>LINUX</span></div><div class="cta-content reveal"><p class="eyebrow"><span class="eyebrow-dot"></span> LA PRÓXIMA SESIÓN EMPIEZA AQUÍ</p><h2 id="cta-title">Hazlo tuyo.</h2><p>Descubre el proyecto, prueba la ISO y disfruta de un Linux ligero, rápido y seguro.</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/DebianS4/DC-LINUXOS/releases/latest" target="_blank" rel="noreferrer">Ver edición para PC (amd64) <span aria-hidden="true">↗</span></a><a class="button button-ghost" href="https://github.com/DebianS4/DC-LINUXOS" target="_blank" rel="noreferrer">Contribuir al proyecto <span aria-hidden="true">↗</span></a></div></div></div>
+        <div class="cta-grid"><div class="cta-number">DC<br /><span>LINUX</span></div><div class="cta-content reveal"><p class="eyebrow"><span class="eyebrow-dot"></span> LA PRÓXIMA SESIÓN EMPIEZA AQUÍ</p><h2 id="cta-title">Hazlo tuyo.</h2><p>Descubre el proyecto, prueba la ISO y disfruta de un Linux ligero, rápido y seguro.</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/DebianS4/DC-LINUXOS/releases/tag/nucleo-2026-11-04" target="_blank" rel="noopener noreferrer">Ver edición para PC (amd64) <span aria-hidden="true">↗</span></a><a class="button button-ghost" href="https://github.com/DebianS4/DC-LINUXOS" target="_blank" rel="noopener noreferrer">Contribuir al proyecto <span aria-hidden="true">↗</span></a></div></div></div>
       </section>
     </main>
 
-    <footer class="site-footer section-pad"><a class="brand" href="#inicio"><img class="brand-logo" src="assets/dc-linux-logo.webp" alt="Logo de DC-LINUX" /><span class="brand-copy"><strong>DC-LINUX</strong><small>OPEN SYSTEM</small></span></a><p>Construido sobre Debian. Diseñado para avanzar.</p><div class="footer-meta"><span>© <span id="year"></span> DC-LINUX</span><span>DEBIAN 13 / XFCE / AMD64</span></div></footer>
+    <footer class="site-footer section-pad"><a class="brand" href="#inicio"><img class="brand-logo" src="assets/dc-linux-logo.webp" alt="Logo de DC-LINUX" /><span class="brand-copy"><strong>DC-LINUX</strong><small>OPEN SYSTEM</small></span></a><p>Construido sobre Debian. Diseñado para avanzar.</p><div class="footer-meta"><span>© <span id="year"></span> DC-LINUX</span><span>AMD64 / RASPBERRY PI / DC LAB</span></div></footer>
     <script src="script.js"></script>
   </body>
 </html>
