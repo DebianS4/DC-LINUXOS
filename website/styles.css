@@ -59,3 +59,102 @@ h1, h2, h3, p { margin-top: 0; }.hero h1 { margin: 0; font: 500 clamp(58px, 8.1v
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; }.reveal { opacity: 1; transform: none; transition: none; }.button, .feature-card, .gallery-side-art img { transition: none; } }
 @media (max-width: 900px) { .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 150px; }.hero-content { max-width: 760px; }.hero-art { justify-self: stretch; width: 100%; margin-top: 25px; }.art-frame, .art-frame > img { min-height: 470px; }.feature-list { grid-template-columns: repeat(2, 1fr); }.intro-grid, .orbit-section { grid-template-columns: 1fr; }.intro-copy { max-width: 650px; }.orbit-art { width: min(100%, 410px); }.orbit-copy { max-width: 650px; }.cta-grid { grid-template-columns: .4fr 1fr; } }
 @media (max-width: 650px) { .site-header { height: 76px; }.menu-toggle { display: block; z-index: 11; }.main-nav { position: absolute; top: 75px; right: 20px; left: 20px; display: grid; gap: 0; padding: 8px; background: rgba(7, 16, 31, .97); border: 1px solid var(--line-strong); transform: translateY(-12px); opacity: 0; pointer-events: none; transition: opacity .2s ease, transform .2s ease; }.main-nav.is-open { transform: translateY(0); opacity: 1; pointer-events: auto; }.main-nav a { padding: 13px 12px; border-bottom: 1px solid var(--line); }.main-nav .nav-cta { margin-top: 7px; border-bottom: 0; }.hero { padding-top: 125px; padding-bottom: 70px; }.hero h1 { font-size: clamp(55px, 17vw, 100px); }.hero-lede { font-size: 14px; }.hero-specs { margin-top: 53px; gap: 17px; }.hero-specs span { font-size: 8px; }.art-frame, .art-frame > img { min-height: 380px; }.art-terminal { right: 15px; bottom: 15px; }.art-badge { top: 16px; right: 16px; font-size: 7px; }.section-pad { padding-left: 20px; padding-right: 20px; }.intro, .feature-section, .gallery-section { padding-top: 87px; padding-bottom: 90px; }.intro-grid { margin-top: 47px; gap: 50px; }.intro h2, .feature-intro h2, .gallery-heading h2, .orbit-copy h2 { font-size: clamp(40px, 12vw, 62px); }.system-line { margin-top: 70px; gap: 10px; font-size: 7px; }.section-heading-row { display: block; }.section-note { margin-top: 20px; text-align: left; }.feature-intro, .gallery-heading { display: block; margin: 48px 0 42px; }.feature-intro > p, .gallery-heading > p { margin: 25px 0 0; }.feature-list { grid-template-columns: 1fr; }.feature-card { min-height: 270px; }.feature-icon { margin-top: 35px; }.orbit-section { padding-top: 80px; padding-bottom: 90px; gap: 70px; }.orbit-art { width: 84vw; }.orbit-label { right: -4%; font-size: 7px; }.gallery-grid { grid-template-columns: 1fr; gap: 37px; }.gallery-main img, .gallery-side-art, .gallery-side-art img { min-height: 320px; }.gallery-main figcaption, .gallery-side figcaption { grid-template-columns: 1fr; }.gallery-main figcaption small, .gallery-side figcaption small { text-align: left; }.final-cta { padding-top: 90px; padding-bottom: 90px; }.cta-grid { grid-template-columns: 1fr; gap: 50px; }.cta-number { font-size: 78px; }.cta-number span { margin-left: 20px; }.final-cta h2 { font-size: 74px; }.site-footer { grid-template-columns: 1fr; gap: 24px; padding-top: 50px; padding-bottom: 50px; }.site-footer > p { text-align: left; }.footer-meta { justify-self: start; text-align: left; } }
+
+
+/* Raspberry Pi / DC Laboratory — tarjeta del panel OBD-II */
+.pi-project-section { padding-top: 116px; padding-bottom: 132px; background: linear-gradient(145deg, #050912, #071426 70%, #050912); }
+.pi-project-heading { display: grid; grid-template-columns: 1fr .8fr; gap: clamp(40px, 8vw, 120px); align-items: end; margin: 58px 0 48px; }
+.pi-project-heading h2 { margin: 0; font: 500 clamp(42px, 5.6vw, 78px)/.97 var(--display); letter-spacing: -.065em; }
+.pi-project-heading h2 span { color: var(--blue-bright); }
+.pi-project-heading > p { max-width: 420px; margin: 0 0 5px; color: var(--muted); font-size: 14px; line-height: 1.75; }
+.pi-project-card { display: grid; grid-template-columns: 1.03fr .97fr; gap: clamp(24px, 5vw, 66px); align-items: center; padding: clamp(18px, 3vw, 34px); border: 1px solid rgba(158, 201, 255, .2); background: #03060b; box-shadow: 0 24px 70px rgba(0, 0, 0, .28); }
+.pi-project-visual { position: relative; min-height: 355px; display: grid; place-items: center; overflow: hidden; border: 1px solid rgba(91, 196, 255, .18); background: radial-gradient(ellipse at 50% 50%, rgba(23, 85, 160, .24), transparent 52%), linear-gradient(145deg, #08101d, #050912); }
+.pi-project-visual::before { position: absolute; inset: 0; content: ""; opacity: .2; background: linear-gradient(rgba(126, 192, 255, .13) 1px, transparent 1px), linear-gradient(90deg, rgba(126, 192, 255, .13) 1px, transparent 1px); background-size: 30px 30px; mask-image: radial-gradient(ellipse at center, #000, transparent 80%); }
+.pi-project-device { position: relative; width: min(88%, 490px); aspect-ratio: 1.48; padding: 13px; border: 1px solid rgba(165, 200, 224, .34); border-radius: 17px; background: linear-gradient(145deg, #263746, #101a27 65%, #09111c); box-shadow: 0 22px 48px rgba(0, 0, 0, .5), inset 0 1px rgba(255, 255, 255, .12); transform: rotate(-2deg); }
+.pi-project-screen { height: 100%; display: flex; flex-direction: column; padding: 11px 13px; border: 1px solid rgba(92, 173, 217, .24); border-radius: 9px; background: radial-gradient(ellipse at 50% 44%, rgba(26, 124, 177, .16), transparent 55%), #07111c; box-shadow: inset 0 0 28px rgba(20, 117, 165, .08); }
+.pi-screen-top, .pi-screen-bottom { display: flex; justify-content: space-between; gap: 10px; color: #8ae4ff; font: 8px var(--mono); letter-spacing: .1em; }
+.pi-screen-top { padding-bottom: 8px; border-bottom: 1px solid rgba(139, 182, 212, .15); }
+.pi-screen-top span:last-child, .pi-screen-bottom span:last-child { color: #698198; }
+.pi-screen-main { flex: 1; display: flex; align-items: center; justify-content: center; gap: 20px; padding: 10px 0; }
+.pi-gauge { position: relative; width: 142px; aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; background: conic-gradient(from 220deg, rgba(72, 194, 247, .9) 0 25%, rgba(83, 159, 199, .18) 25% 76%, transparent 76% 100%); filter: drop-shadow(0 0 12px rgba(56, 175, 226, .16)); }
+.pi-gauge::before { position: absolute; inset: 8px; content: ""; border: 1px solid rgba(105, 183, 221, .2); border-radius: 50%; background: #08121e; }
+.pi-gauge > div { position: relative; display: grid; justify-items: center; gap: 5px; text-align: center; }
+.pi-gauge small { color: #7ca3bc; font: 7px var(--mono); letter-spacing: .1em; }
+.pi-gauge strong { color: #e1f5ff; font: 600 20px var(--display); }
+.pi-screen-specs { display: grid; gap: 9px; min-width: 145px; }
+.pi-screen-specs div { display: grid; gap: 5px; padding: 10px 11px; border: 1px solid rgba(121, 178, 210, .16); background: rgba(16, 34, 48, .52); }
+.pi-screen-specs small { color: #718ca1; font: 7px var(--mono); letter-spacing: .1em; }
+.pi-screen-specs b { color: #d7ebf8; font: 500 10px var(--display); }
+.pi-screen-bottom { padding-top: 8px; border-top: 1px solid rgba(139, 182, 212, .15); color: #79b3d2; font-size: 7px; }
+.pi-visual-caption { position: absolute; bottom: 12px; left: 14px; color: #74879c; font: 7px var(--mono); letter-spacing: .08em; }
+.pi-project-copy { min-width: 0; }
+.pi-project-label { margin: 0 0 12px; color: var(--blue-bright); font: 9px var(--mono); letter-spacing: .14em; }
+.pi-project-copy h3 { margin: 0 0 17px; font: 500 clamp(28px, 3.3vw, 43px)/1.08 var(--display); letter-spacing: -.06em; }
+.pi-project-copy h3 span { color: var(--blue-bright); }
+.pi-project-copy > p:not(.pi-project-label):not(.pi-project-note) { max-width: 500px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
+.pi-project-facts { display: grid; gap: 8px; margin: 22px 0 0; }
+.pi-project-facts div { display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 10px 12px; border: 1px solid rgba(158, 201, 255, .14); background: rgba(7, 13, 23, .65); }
+.pi-project-facts dt { color: #7890ab; font: 8px var(--mono); letter-spacing: .1em; }
+.pi-project-facts dd { margin: 0; color: #d8e7f7; font: 500 11px var(--display); text-align: right; }
+.pi-project-note { margin: 14px 0 0; color: #8090a5; font-size: 10px; line-height: 1.6; }
+.pi-project-links { display: flex; flex-wrap: wrap; gap: 9px 18px; margin-top: 17px; }
+.pi-project-links a { display: inline-flex; align-items: center; gap: 6px; color: var(--cyan); font: 600 9px/1.5 var(--mono); }
+.pi-project-links a:hover, .pi-project-links a:focus-visible { color: var(--white); text-decoration: underline; text-underline-offset: 3px; }
+.pi-project-links span { color: var(--blue-bright); font-size: 12px; }
+@media (max-width: 900px) {
+  .pi-project-card { grid-template-columns: 1fr; gap: 25px; }
+  .pi-project-heading { grid-template-columns: 1fr .8fr; }
+  .pi-project-visual { min-height: 320px; }
+  .pi-project-device { width: min(80%, 500px); }
+}
+@media (max-width: 650px) {
+  .pi-project-section { padding-top: 86px; padding-bottom: 90px; }
+  .pi-project-heading { grid-template-columns: 1fr; gap: 18px; margin: 45px 0 32px; }
+  .pi-project-heading h2 { font-size: clamp(40px, 12vw, 62px); }
+  .pi-project-heading > p { font-size: 13px; }
+  .pi-project-card { gap: 22px; padding: 14px; }
+  .pi-project-visual { min-height: 250px; }
+  .pi-project-device { width: min(100%, 460px); padding: 9px; transform: none; }
+  .pi-project-screen { padding: 8px; }
+  .pi-screen-main { gap: 13px; }
+  .pi-gauge { width: 112px; }
+  .pi-screen-specs { min-width: 112px; }
+  .pi-screen-specs div { padding: 8px 7px; }
+  .pi-screen-specs b { font-size: 9px; }
+  .pi-project-copy h3 { font-size: 31px; }
+  .pi-project-facts dd { font-size: 10px; }
+  .pi-project-links { display: grid; }
+}
+
+
+/* Descargas DC-LINUX para Raspberry Pi: botones desactivados hasta publicar imágenes verificadas */
+.pi-downloads { margin-top: 76px; padding-top: 54px; border-top: 1px solid rgba(158, 201, 255, .17); }
+.pi-download-heading { display: flex; justify-content: space-between; align-items: end; gap: 40px; margin-bottom: 26px; }
+.pi-download-label { margin: 0 0 10px; color: var(--blue-bright); font: 9px var(--mono); letter-spacing: .13em; }
+.pi-download-heading h3 { margin: 0; font: 500 clamp(34px, 4.2vw, 54px)/1 var(--display); letter-spacing: -.06em; }
+.pi-download-heading h3 span { color: var(--blue-bright); }
+.pi-download-heading > p { max-width: 430px; margin: 0 0 3px; color: var(--muted); font-size: 12px; line-height: 1.75; }
+.pi-download-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.pi-download-card { display: flex; flex-direction: column; align-items: flex-start; min-height: 230px; padding: 21px; border: 1px solid rgba(158, 201, 255, .17); background: linear-gradient(145deg, rgba(7, 13, 23, .96), rgba(3, 6, 11, .98)); }
+.pi-download-status { display: flex; align-items: center; gap: 8px; margin: 0 0 18px; color: #9caec2; font: 8px var(--mono); letter-spacing: .1em; }
+.pi-download-status > span { width: 6px; height: 6px; border-radius: 50%; background: #67c9f5; box-shadow: 0 0 10px rgba(103, 201, 245, .35); }
+.pi-download-status.is-building { color: #8de1ff; }
+.pi-download-status.is-building > span { background: #52c8f4; }
+.pi-download-status.is-evaluating > span { background: #91a2b7; box-shadow: 0 0 9px rgba(145, 162, 183, .25); }
+.pi-download-card h4 { margin: 0 0 12px; color: var(--white); font: 500 21px/1.15 var(--display); letter-spacing: -.035em; }
+.pi-download-card > p:not(.pi-download-status) { margin: 0 0 18px; color: var(--muted); font-size: 11px; line-height: 1.7; }
+.pi-download-button, .pi-download-button:disabled { width: 100%; margin-top: auto; padding: 11px 12px; border: 1px solid rgba(124, 157, 185, .22); background: rgba(23, 39, 54, .58); color: #8799ab; font: 600 8px var(--mono); letter-spacing: .04em; text-align: center; cursor: not-allowed; opacity: .82; }
+@media (max-width: 900px) {
+  .pi-download-heading { align-items: flex-start; }
+  .pi-download-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pi-download-card:last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 650px) {
+  .pi-downloads { margin-top: 54px; padding-top: 36px; }
+  .pi-download-heading { display: block; margin-bottom: 22px; }
+  .pi-download-heading > p { margin-top: 16px; font-size: 12px; }
+  .pi-download-grid { grid-template-columns: 1fr; gap: 11px; }
+  .pi-download-card { min-height: 0; padding: 18px; }
+  .pi-download-card:last-child { grid-column: auto; }
+  .pi-download-card h4 { font-size: 20px; }
+}

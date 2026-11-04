@@ -66,9 +66,8 @@ La compilación puede fallar en CI o contenedores que bloqueen montajes, espacio
 
 - [Repositorio del proyecto](https://github.com/DebianS4/DC-LINUXOS)
 - [Release Núcleo Linux 1.0](https://github.com/DebianS4/DC-LINUXOS/releases/tag/nucleo-2026-11-04)
+- [Sitio web de DC-LINUX](https://debians4.github.io/DC-LINUXOS/)
 
 ## Raspberry Pi
 
 Edición especial para Raspberry Pi Zero W 1.1.
-
-[Descargar imagen](https://github.com/DebianS4/DC-LINUXOS/releases/download/dcecu-pi-zero-w-lite-v1.0.0/DC-ECU-PiZeroW-Lite.img.xz) · [Checksum SHA-256](https://github.com/DebianS4/DC-LINUXOS/releases/download/dcecu-pi-zero-w-lite-v1.0.0/DC-ECU-PiZeroW-Lite.img.xz.sha256)
