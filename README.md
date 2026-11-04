@@ -48,7 +48,7 @@ SHA-256 publicado para la ISO reconstruida:
 
 ## Compilar desde el código fuente
 
-Compila en Debian o Ubuntu con conexión a Internet y al menos **25 GB de espacio libre**. Se requiere `live-build` `1:20250505+deb13u1` o posterior, `debootstrap`, `xorriso`, `squashfs-tools`, `dosfstools`, `mtools`, `grub-pc-bin`, `grub-efi-amd64-bin` y un llavero de Debian que incluya las claves de Trixie. El proceso utiliza `sudo`.
+Compila en Debian o Ubuntu con conexión a Internet y al menos **25 GB de espacio libre**. Se requiere `live-build` `1:20250505+deb13u1` o posterior, `debootstrap`, `xorriso`, `squashfs-tools`, `dosfstools`, `mtools`, `grub-pc-bin`, `grub-efi-amd64-bin` y acceso a los repositorios oficiales de Debian Trixie. El proceso utiliza `sudo`.
 
 Desde la raíz del repositorio, ejecuta:
 
@@ -60,7 +60,7 @@ El script limpia artefactos anteriores, restaura la configuración de `live-buil
 
 ## Verificación antes de instalar
 
-La compilación puede fallar en CI o contenedores que bloqueen montajes, espacios de nombres o `chroot`. Antes de usar o distribuir la imagen, pruébala en una máquina virtual y comprueba red, Wi-Fi, audio, gráficos e instalación en hardware real.
+La compilación puede fallar en CI o contenedores que bloqueen montajes, espacios de nombres o `chroot`. Antes de usar o distribuir la imagen, pruébala en una máquina virtual y comprueba conectividad, audio, gráficos e instalación en hardware real.
 
 ## Enlaces
 
@@ -70,5 +70,3 @@ La compilación puede fallar en CI o contenedores que bloqueen montajes, espacio
 ## Raspberry Pi
 
 Edición especial para Raspberry Pi Zero W 1.1.
-
-[Descargar imagen](https://github.com/DebianS4/DC-LINUXOS/releases/download/dcecu-pi-zero-w-lite-v1.0.0/DC-ECU-PiZeroW-Lite.img.xz) · [Checksum SHA-256](https://github.com/DebianS4/DC-LINUXOS/releases/download/dcecu-pi-zero-w-lite-v1.0.0/DC-ECU-PiZeroW-Lite.img.xz.sha256)
