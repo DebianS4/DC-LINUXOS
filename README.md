@@ -5,7 +5,6 @@
 
   <p>
     <a href="https://github.com/DebianS4/DC-LINUXOS/releases/tag/nucleo-2026-11-04"><img src="https://img.shields.io/badge/Release-N%C3%BAcleo%20Linux%201.0-0A66C2?style=for-the-badge&logo=github&logoColor=white" alt="Release Núcleo Linux 1.0"></a>
-    <img src="https://img.shields.io/badge/Debian-13%20Trixie-A81D33?style=for-the-badge&logo=debian&logoColor=white" alt="Debian 13 Trixie">
     <img src="https://img.shields.io/badge/Arquitectura-amd64-2563EB?style=for-the-badge" alt="Arquitectura amd64">
     <img src="https://img.shields.io/badge/Escritorio-XFCE-168DE2?style=for-the-badge&logo=xfce&logoColor=white" alt="Escritorio XFCE">
   </p>
@@ -67,3 +66,9 @@ La compilación puede fallar en CI o contenedores que bloqueen montajes, espacio
 
 - [Repositorio del proyecto](https://github.com/DebianS4/DC-LINUXOS)
 - [Release Núcleo Linux 1.0](https://github.com/DebianS4/DC-LINUXOS/releases/tag/nucleo-2026-11-04)
+
+## Raspberry Pi
+
+Edición especial para Raspberry Pi Zero W 1.1.
+
+[Descargar imagen](https://github.com/DebianS4/DC-LINUXOS/releases/download/dcecu-pi-zero-w-lite-v1.0.0/DC-ECU-PiZeroW-Lite.img.xz) · [Checksum SHA-256](https://github.com/DebianS4/DC-LINUXOS/releases/download/dcecu-pi-zero-w-lite-v1.0.0/DC-ECU-PiZeroW-Lite.img.xz.sha256)
