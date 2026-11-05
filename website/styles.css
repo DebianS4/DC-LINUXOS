@@ -233,6 +233,8 @@ h1, h2, h3, p { margin-top: 0; }.hero h1 { margin: 0; font: 500 clamp(58px, 8.1v
 .pi4-card-media figcaption { position: absolute; right: 7px; bottom: 7px; left: 7px; padding: 6px 7px; background: rgba(3, 8, 17, .82); color: #d7e7f5; font: 7px/1.45 var(--mono); letter-spacing: .04em; }
 .pi4-preview { grid-column: 1 / -1; aspect-ratio: 1.52 / 1; }
 .pi4-preview img { object-fit: contain; }
+.pi4-user-visual { grid-column: 1 / -1; aspect-ratio: 1080 / 631; }
+.pi4-user-visual img { object-fit: contain; }
 .pi4-editorial, .pi4-detail { aspect-ratio: 1 / 1; }
 @media (max-width: 900px) {
   .pi4-desktop-card { grid-template-columns: 1fr; }
