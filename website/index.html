@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#050912" />
+    <meta name="theme-color" content="#061227" />
     <meta name="referrer" content="no-referrer" />
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'self'; object-src 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; media-src 'none'; manifest-src 'none'; img-src 'self' data:; script-src 'self'; style-src 'self'; style-src-attr 'none'; font-src 'self'; connect-src 'none'; upgrade-insecure-requests" />
-    <meta name="description" content="DC-LINUX — Núcleo Linux 1.0, edición Live basada en Debian 13 (Trixie) y XFCE, con descargas verificables para PC y Raspberry Pi." />
-    <title>DC-LINUX — Núcleo Linux 1.0 | Debian 13 y XFCE</title>
+    <meta name="description" content="Conoce DC-LINUX: edición Live basada en Debian 13 y XFCE, con descargas SHA-256 para PC y Raspberry Pi, guías claras y proyectos DC Laboratory." />
+    <title>DC-LINUX — Debian 13 · XFCE · PC y Raspberry Pi</title>
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
     <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48" type="image/x-icon" />
@@ -22,6 +22,10 @@
         <img class="brand-logo" src="assets/dc-linux-logo.webp" alt="Logo de DC-LINUX" />
         <span class="brand-copy"><strong>DC-LINUX</strong><small>EDICIÓN LIVE</small></span>
       </a>
+      <div class="site-clock" aria-label="Hora local en este dispositivo">
+        <span class="site-clock-label">HORA LOCAL</span>
+        <time id="site-clock" datetime="">--:--</time>
+      </div>
 
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
         <span></span><span></span>
@@ -43,34 +47,32 @@
         <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
         <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
         <div class="hero-content reveal">
-          <p class="eyebrow"><span class="eyebrow-dot"></span> SISTEMA OPERATIVO · EDICIÓN LIVE</p>
-          <h1 id="hero-title">Linux ligero,<br /><span>basado en Debian.</span></h1>
-          <p class="hero-lede">DC-LINUX combina Debian 13 (Trixie), XFCE y una identidad visual propia.</p>
+          <p class="eyebrow"><span class="eyebrow-dot"></span> DEBIAN 13 · TRIXIE · XFCE</p>
+          <h1 id="hero-title">Tu Linux.<br /><span>A tu manera.</span></h1>
+          <p class="hero-lede">DC-LINUX une una base Debian Live, un escritorio XFCE y una identidad visual hecha para sentirse tuya.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#sistema">Explorar DC-LINUX <span aria-hidden="true">↓</span></a>
-            <a class="button button-ghost" href="#guias">Guías de descarga <span aria-hidden="true">↓</span></a>
-            <a class="button button-ghost" href="https://gooey.ai/2/keyRb" target="_blank" rel="noopener noreferrer">Regresar al laboratorio <span aria-hidden="true">↗</span></a>
+            <a class="button button-primary" href="#guias">Elige tu edición <span aria-hidden="true">↓</span></a>
+            <a class="button button-ghost" href="#entorno">Ver el escritorio <span aria-hidden="true">↓</span></a>
+            <a class="button button-ghost" href="https://gooey.ai/2/keyRb" target="_blank" rel="noopener noreferrer">El Laboratorio <span aria-hidden="true">↗</span></a>
           </div>
           <div class="hero-specs" aria-label="Especificaciones rápidas">
             <div><strong>01</strong><span>Debian 13<br />Trixie</span></div>
             <div><strong>02</strong><span>XFCE<br />ligero</span></div>
-            <div><strong>03</strong><span>BIOS +<br />UEFI</span></div>
+            <div><strong>03</strong><span>Live +<br />instalador</span></div>
           </div>
         </div>
 
-        <div class="hero-art reveal" aria-label="Vista abstracta del escritorio DC-LINUX">
-          <div class="art-frame">
-            <img src="assets/dc-linux-hero-v2.webp" alt="Visual conceptual del escritorio DC-LINUX con tonos azules, barra superior y barra centrada" />
-            <div class="art-scanline" aria-hidden="true"></div>
-            <div class="art-badge"><span class="pulse"></span> DC-LINUX / LIVE SESSION</div>
-            <div class="art-terminal" aria-hidden="true">
-              <span class="terminal-top"><i></i><i></i><i></i><b>system@dc-linux:~</b></span>
-              <span><b class="prompt">$</b> cat /etc/os-release</span>
-              <span class="terminal-blue">PRETTY_NAME="Debian GNU/Linux 13 (trixie)"</span>
-              <span>DESKTOP: XFCE · ARCHITECTURE: AMD64</span>
-            </div>
-          </div>
-          <p class="art-caption"><span>—</span> Debian 13 Trixie · XFCE · AMD64</p>
+        <div class="hero-art reveal" aria-label="Escritorio suministrado y visual original de DC-LINUX">
+          <figure class="hero-display">
+            <div class="hero-display-topline"><span><i></i> SESIÓN EN VIVO</span><span>AMD64 / XFCE</span></div>
+            <img src="assets/nucleo-desktop-preview.png" alt="Captura del escritorio Núcleo XFCE: fondo azul, reloj en el panel superior, cursor rojo brillante y barra de aplicaciones centrada" fetchpriority="high" />
+            <figcaption><span>ESCRITORIO SUMINISTRADO</span><span>FONDO AZUL · CURSOR ROJO · DOCK CENTRAL</span></figcaption>
+          </figure>
+          <figure class="hero-original">
+            <img src="assets/dc-linux-hero-v2.webp" alt="Visual original de DC-LINUX: monitor con escritorio azul y cursor rojo" loading="lazy" decoding="async" />
+            <figcaption><span>VISUAL ORIGINAL</span><strong>Una identidad que también se reconoce de lejos.</strong></figcaption>
+          </figure>
+          <div class="hero-stamp"><span class="pulse"></span><span>DEBIAN 13<br /><b>XFCE / LIVE</b></span></div>
         </div>
       </section>
 
@@ -309,6 +311,13 @@
                 <a href="https://www.raspberrypi.com/software/" target="_blank" rel="noopener noreferrer">Raspberry Pi Imager <span aria-hidden="true">↗</span></a>
               </div>
               <a class="pi-download-button is-available download-pulse" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/rpi-minimal-2026.11.04/DC-LINUX-Pi4-Pi5-Minimal.img.xz" target="_blank" rel="noopener noreferrer">Descargar imagen (.img.xz) <span aria-hidden="true">↗</span></a>
+            </article>
+            <article class="pi-download-card pi-download-card--future" aria-label="Espacio reservado para futuras imágenes Raspberry Pi">
+              <div class="future-iso-mark" aria-hidden="true">+</div>
+              <p class="pi-download-status is-planned"><span aria-hidden="true"></span> ESPACIO RESERVADO · SIN DESCARGA</p>
+              <h4>Próximas imágenes.</h4>
+              <p>Este espacio queda listo para futuras ISOs Raspberry Pi. Se habilitará cuando haya una edición publicada y su checksum SHA-256.</p>
+              <span class="future-iso-foot">EDICIÓN / MODELO / HASH</span>
             </article>
           </div>
         </div>

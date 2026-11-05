@@ -32,6 +32,21 @@ if (menuButton && mainNav) {
 const year = document.querySelector('#year');
 if (year) year.textContent = String(new Date().getFullYear());
 
+const siteClock = document.querySelector('#site-clock');
+if (siteClock) {
+  const updateClock = () => {
+    const now = new Date();
+    siteClock.dateTime = now.toISOString();
+    siteClock.textContent = new Intl.DateTimeFormat(undefined, {
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false,
+    }).format(now);
+  };
+  updateClock();
+  window.setInterval(updateClock, 30_000);
+}
+
 const revealItems = document.querySelectorAll('.reveal');
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver((entries, currentObserver) => {
