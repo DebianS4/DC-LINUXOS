@@ -208,6 +208,48 @@ h1, h2, h3, p { margin-top: 0; }.hero h1 { margin: 0; font: 500 clamp(58px, 8.1v
   .guide-warning { margin-top: 0; }
 }
 
+/* Edición de escritorio Raspberry Pi 4 junto a la guía de PC */
+.pi4-desktop-card { display: grid; grid-template-columns: minmax(0, .98fr) minmax(0, 1.02fr); gap: clamp(24px, 4vw, 42px); align-items: center; border-color: rgba(91, 196, 255, .3); background: radial-gradient(ellipse at 88% 12%, rgba(27, 111, 193, .17), transparent 40%), linear-gradient(145deg, rgba(11, 21, 38, .98), rgba(3, 7, 14, .99)); }
+.pi4-card-copy { display: flex; flex-direction: column; min-width: 0; }
+.pi4-card-title { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 20px; }
+.pi4-edition-logo { width: 58px; height: 58px; flex: 0 0 58px; object-fit: contain; border: 1px solid rgba(91, 196, 255, .4); background: #03060b; box-shadow: 0 0 24px rgba(0, 134, 255, .18); }
+.pi4-card-title .guide-index { margin: 3px 0 10px; }
+.pi4-card-title h3 { margin: 0; font-size: clamp(25px, 2.6vw, 34px); }
+.pi4-card-title h3 span { color: var(--blue-bright); }
+.pi4-card-copy > .guide-summary { font-size: 13px; line-height: 1.75; }
+.pi4-specs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 0 0 20px; padding: 0; list-style: none; }
+.pi4-specs li { display: grid; align-content: start; gap: 6px; min-width: 0; padding: 10px 9px; border: 1px solid rgba(158, 201, 255, .16); background: rgba(3, 8, 16, .48); }
+.pi4-specs strong { color: var(--blue-bright); font: 8px var(--mono); letter-spacing: .1em; }
+.pi4-specs span { color: #c2d1e1; font: 9px/1.45 var(--mono); overflow-wrap: anywhere; }
+.pi4-download-main { width: 100%; min-width: 0; border-color: var(--blue); background: var(--blue); color: #031020; }
+.pi4-download-main:hover, .pi4-download-main:focus-visible { background: var(--cyan); border-color: var(--cyan); }
+.pi4-secondary-actions { display: grid; gap: 8px; margin-top: 9px; }
+.pi4-card-copy .pi4-verification-note { margin: 20px 0 0; }
+.pi4-card-media { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; min-width: 0; }
+.pi4-card-media figure { position: relative; min-width: 0; margin: 0; overflow: hidden; border: 1px solid rgba(91, 196, 255, .25); background: #03060b; }
+.pi4-card-media img { width: 100%; height: 100%; object-fit: cover; }
+.pi4-card-media figcaption { position: absolute; right: 7px; bottom: 7px; left: 7px; padding: 6px 7px; background: rgba(3, 8, 17, .82); color: #d7e7f5; font: 7px/1.45 var(--mono); letter-spacing: .04em; }
+.pi4-preview { grid-column: 1 / -1; aspect-ratio: 1.52 / 1; }
+.pi4-preview img { object-fit: contain; }
+.pi4-editorial, .pi4-detail { aspect-ratio: 1 / 1; }
+@media (max-width: 900px) {
+  .pi4-desktop-card { grid-template-columns: 1fr; }
+  .pi4-card-media { grid-template-columns: 1.4fr 1fr 1fr; }
+  .pi4-preview { grid-column: auto; aspect-ratio: 1.45 / 1; }
+}
+@media (max-width: 650px) {
+  .pi4-desktop-card { gap: 23px; }
+  .pi4-card-title { gap: 11px; }
+  .pi4-edition-logo { width: 48px; height: 48px; flex-basis: 48px; }
+  .pi4-card-title .guide-index { font-size: 7px; letter-spacing: .06em; }
+  .pi4-specs { gap: 6px; }
+  .pi4-specs li { padding: 8px 6px; }
+  .pi4-specs span { font-size: 8px; }
+  .pi4-card-media { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+  .pi4-preview { grid-column: 1 / -1; aspect-ratio: 1.45 / 1; }
+  .pi4-card-media figcaption { right: 5px; bottom: 5px; left: 5px; padding: 5px; font-size: 6px; }
+}
+
 /* Raspberry Pi / DC Laboratory — sección final integrada */
 .pi-project-section { position: relative; overflow: hidden; padding-top: 118px; padding-bottom: 132px; background: radial-gradient(ellipse at 78% 18%, rgba(34, 116, 207, .19), transparent 32%), linear-gradient(145deg, #050912, #071426 65%, #050912); }
 .pi-project-section::before { position: absolute; inset: 0; content: ""; pointer-events: none; opacity: .16; background: linear-gradient(rgba(126, 192, 255, .11) 1px, transparent 1px), linear-gradient(90deg, rgba(126, 192, 255, .11) 1px, transparent 1px); background-size: 54px 54px; mask-image: linear-gradient(to bottom, #000, transparent 75%); }

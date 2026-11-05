@@ -122,11 +122,11 @@
       <section class="guide-section section-pad" id="guias" aria-labelledby="guide-title">
         <div class="section-heading-row">
           <div class="section-kicker"><span>05</span><span class="rule"></span><span>DESCARGA / INSTALACIÓN</span></div>
-          <p class="section-note">PC / AMD64.<br />Pasos claros.</p>
+          <p class="section-note">PC / AMD64 + Raspberry Pi 4 / ARM64.<br />Elige tu edición.</p>
         </div>
         <div class="guide-heading reveal">
           <h2 id="guide-title">Elige tu equipo.<br /><span>Sigue la guía.</span></h2>
-          <p>Descarga la ISO de PC desde su release, verifica su SHA-256 y prepara el medio de arranque.</p>
+          <p>Descarga la edición que corresponde a tu equipo, verifica su SHA-256 y prepara una USB o una microSD.</p>
         </div>
         <div class="guide-grid guide-grid-single">
           <article class="guide-card reveal" aria-labelledby="guide-pc-title">
@@ -140,6 +140,46 @@
               <li><strong>Graba la ISO en una memoria USB</strong> con una herramienta de escritura de imágenes. Reinicia el PC, elige arrancar desde USB y prueba la sesión Live o inicia el instalador.</li>
             </ol>
             <p class="guide-warning">La grabación borra la unidad USB seleccionada. Revisa dos veces el destino antes de escribir.</p>
+          </article>
+
+          <article class="guide-card reveal pi4-desktop-card" id="pi4-desktop" aria-labelledby="guide-pi4-title">
+            <div class="pi4-card-copy">
+              <div class="pi4-card-title">
+                <img class="pi4-edition-logo" src="assets/rpi-edition-logo.png" alt="Logotipo de Raspberry Pi suministrado" loading="lazy" decoding="async" />
+                <div>
+                  <p class="guide-index">02 / RASPBERRY PI 4 · ESCRITORIO · ARM64</p>
+                  <h3 id="guide-pi4-title">Núcleo Linux<br /><span>para Raspberry Pi 4.</span></h3>
+                </div>
+              </div>
+              <p class="guide-summary">Edición de escritorio ARM64 basada en Debian 13 y XFCE. Conserva la identidad visual de Núcleo: fondo azul, cursor rojo, reloj superior y barra de aplicaciones centrada. La imagen comprimida se graba en una microSD.</p>
+              <ul class="pi4-specs" aria-label="Características de la edición Raspberry Pi 4">
+                <li><strong>BASE</strong><span>Debian 13 · XFCE</span></li>
+                <li><strong>FORMATO</strong><span>ARM64 · .img.xz</span></li>
+                <li><strong>TAMAÑO</strong><span>~533 MiB</span></li>
+              </ul>
+              <div class="pi4-download-actions">
+                <a class="button button-primary pi4-download-main" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/rpi4-desktop-2026.11.04/DC-LINUXOS-RaspberryPi4-arm64.img.xz" target="_blank" rel="noopener noreferrer">Descargar imagen (.img.xz) <span aria-hidden="true">↓</span></a>
+                <div class="pi4-secondary-actions">
+                  <a class="guide-secondary-link" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/rpi4-desktop-2026.11.04/DC-LINUXOS-RaspberryPi4-arm64.img.xz.sha256" target="_blank" rel="noopener noreferrer">Descargar checksum SHA-256 <span aria-hidden="true">↗</span></a>
+                  <a class="guide-secondary-link" href="https://github.com/DebianS4/DC-LINUXOS/releases/tag/rpi4-desktop-2026.11.04" target="_blank" rel="noopener noreferrer">Ver release y notas <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+              <p class="guide-warning pi4-verification-note">La imagen y el sistema de archivos superaron las comprobaciones de construcción; el arranque en una Raspberry Pi 4 física aún no se ha probado. Verifica el SHA-256 antes de grabar. La grabación borrará la microSD elegida.</p>
+            </div>
+            <div class="pi4-card-media" aria-label="Vistas de la edición Raspberry Pi 4">
+              <figure class="pi4-preview">
+                <img src="assets/dc-linuxos-raspberry-pi-4-preview.png" alt="Vista de diseño del escritorio Núcleo XFCE con fondo azul, cursor rojo, reloj superior y barra centrada" loading="lazy" decoding="async" />
+                <figcaption>VISTA DE DISEÑO · NO ES UNA PRUEBA DE ARRANQUE</figcaption>
+              </figure>
+              <figure class="pi4-editorial">
+                <img src="assets/rpi4-desktop-editorial.webp" alt="Visual original de una computadora ARM compacta conectada a un monitor con escritorio azul" loading="lazy" decoding="async" />
+                <figcaption>VISUAL ORIGINAL / ESCRITORIO</figcaption>
+              </figure>
+              <figure class="pi4-detail">
+                <img src="assets/rpi4-desktop-board-detail.webp" alt="Visual original conceptual de una placa compacta y una tarjeta microSD" loading="lazy" decoding="async" />
+                <figcaption>VISUAL ORIGINAL / ARM64</figcaption>
+              </figure>
+            </div>
           </article>
 
 
