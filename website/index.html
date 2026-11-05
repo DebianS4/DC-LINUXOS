@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#050912" />
     <meta name="referrer" content="no-referrer" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; img-src 'self' data:; script-src 'self'; style-src 'self'; font-src 'self'; connect-src 'self'; upgrade-insecure-requests" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'self'; object-src 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; media-src 'none'; manifest-src 'none'; img-src 'self' data:; script-src 'self'; style-src 'self'; style-src-attr 'none'; font-src 'self'; connect-src 'none'; upgrade-insecure-requests" />
     <meta name="description" content="DC-LINUX — Núcleo Linux 1.0, edición Live basada en Debian 13 (Trixie) y XFCE, con descargas verificables para PC y Raspberry Pi." />
     <title>DC-LINUX — Núcleo Linux 1.0 | Debian 13 y XFCE</title>
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
@@ -130,6 +130,14 @@
         <div class="guide-heading reveal">
           <h2 id="guide-title">Elige tu equipo.<br /><span>Sigue la guía.</span></h2>
           <p>Descarga la edición que corresponde a tu equipo, verifica su SHA-256 y prepara una USB o una microSD.</p>
+        </div>
+        <div class="download-security" aria-label="Medidas de seguridad de las descargas">
+          <div class="download-security-badges">
+            <span class="security-badge"><span aria-hidden="true">✓</span> SITIO HTTPS / HSTS</span>
+            <span class="security-badge"><span aria-hidden="true">✓</span> SHA-256 DISPONIBLE</span>
+            <span class="security-badge"><span aria-hidden="true">✓</span> GITHUB RELEASES</span>
+          </div>
+          <p>SHA-256 ayuda a detectar archivos dañados o modificados frente a su suma publicada; no sustituye una firma digital ni autentica por sí solo quién publicó el archivo.</p>
         </div>
         <div class="guide-grid guide-grid-single">
           <article class="guide-card reveal pc-amd64-card" aria-labelledby="guide-pc-title">
