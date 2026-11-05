@@ -3,7 +3,7 @@
   <img src="assets/dc-linuxos-logo.png" alt="Logo de DC-LINUX OS" width="190">
   <h1>DC-LINUX OS · Núcleo Linux 1.0</h1>
   <p>Una edición Live ligera basada en Debian 13 (Trixie), con escritorio XFCE.</p>
-
+🔗https://debians4.github.io/DC-LINUXOS/
   <p>
     <a href="https://github.com/DebianS4/DC-LINUXOS/releases/tag/nucleo-2026-11-04"><img src="https://img.shields.io/badge/Release-N%C3%BAcleo%20Linux%201.0-0A66C2?style=for-the-badge&logo=github&logoColor=white" alt="Release Núcleo Linux 1.0"></a>
     <img src="https://img.shields.io/badge/Arquitectura-amd64-2563EB?style=for-the-badge" alt="Arquitectura amd64">
