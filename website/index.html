@@ -172,6 +172,14 @@
               <a class="guide-secondary-link pc-download-checksum" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/nucleo-2026-11-04/live-image-amd64.hybrid.iso.sha256" target="_blank" rel="noopener noreferrer">Descargar checksum SHA-256 (.sha256) <span aria-hidden="true">↗</span></a>
               <a class="guide-secondary-link pc-download-release" href="https://github.com/DebianS4/DC-LINUXOS/releases/tag/nucleo-2026-11-04" target="_blank" rel="noopener noreferrer">Ver release y notas <span aria-hidden="true">↗</span></a>
             </div>
+            <aside class="pc-next-edition" aria-labelledby="pc-next-title">
+              <div class="future-iso-mark" aria-hidden="true">+</div>
+              <div>
+                <p class="pi-download-status is-planned"><span aria-hidden="true"></span>PRÓXIMA VERSIÓN PC · ESPACIO RESERVADO</p>
+                <h4 id="pc-next-title">Otra versión para PC, próximamente.</h4>
+                <p>Se publicará aquí cuando esté lista, junto con sus enlaces de descarga y su checksum SHA-256.</p>
+              </div>
+            </aside>
             <ol class="guide-steps">
               <li><strong>Descarga las dos partes y el checksum.</strong> Guarda juntos <code>live-image-amd64.hybrid.iso.part00</code>, <code>live-image-amd64.hybrid.iso.part01</code> y <code>live-image-amd64.hybrid.iso.sha256</code>.</li>
               <li><strong>Une y verifica la ISO</strong> desde esa carpeta con Linux, macOS o WSL:<code class="guide-code">cat live-image-amd64.hybrid.iso.part00 live-image-amd64.hybrid.iso.part01 &gt; live-image-amd64.hybrid.iso</code>Comprueba el checksum con <code>sha256sum -c live-image-amd64.hybrid.iso.sha256</code> en Linux/WSL o <code>shasum -a 256 -c live-image-amd64.hybrid.iso.sha256</code> en macOS.<span class="guide-hash">SHA-256 esperado: <code>94e3e87f82210501c812ad7a3b062ff6620eee5e56c07cdf192542463b9d9e47</code></span></li>
