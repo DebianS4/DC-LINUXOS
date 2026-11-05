@@ -29,4 +29,11 @@ jobs:
         with:
           persist-credentials: false
       - name: Build static website
-        run: sh website/build.sh
+        working-directory: website
+        run: sh build.sh
+      - name: Verify Pages artifact
+        run: |
+          test -s website/dist/index.html
+          test -s website/dist/styles.css
+          test -s website/dist/assets/rpi-zero-hero-v2.webp
+          test -s website/dist/assets/rpi-pi45-download-v2.webp
