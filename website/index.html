@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#050912" />
-    <meta name="description" content="DC-LINUX: una edición Live ligera basada en Debian 13 Trixie y XFCE." />
+    <meta name="referrer" content="no-referrer" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; img-src 'self' data:; script-src 'self'; style-src 'self'; font-src 'self'; connect-src 'self'; upgrade-insecure-requests" />
+    <meta name="description" content="DC-LINUX: edición Live ligera basada en Debian 13 y XFCE, con proyectos y descargas mínimas para Raspberry Pi." />
     <title>DC-LINUX — Linux ligero, rápido y seguro</title>
+    <link rel="icon" href="assets/dc-linux-logo.webp" type="image/webp" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -27,7 +30,7 @@
         <a href="#entorno">Entorno</a>
         <a href="#guias">Guías</a>
         <a href="#raspberry-pi">Raspberry Pi</a>
-        <a class="nav-cta" href="https://github.com/DebianS4/DC-LINUXOS" target="_blank" rel="noreferrer">Ver código <span aria-hidden="true">↗</span></a>
+        <a class="nav-cta" href="https://github.com/DebianS4/DC-LINUXOS" target="_blank" rel="noopener noreferrer">Ver código <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
 
@@ -42,6 +45,7 @@
           <div class="hero-actions">
             <a class="button button-primary" href="#sistema">Explorar DC-LINUX <span aria-hidden="true">↓</span></a>
             <a class="button button-ghost" href="#guias">Guías de descarga <span aria-hidden="true">↓</span></a>
+            <a class="button button-ghost" href="https://gooey.ai/2/keyRb" target="_blank" rel="noopener noreferrer">Regresar al laboratorio <span aria-hidden="true">↗</span></a>
           </div>
           <div class="hero-specs" aria-label="Especificaciones rápidas">
             <div><strong>01</strong><span>Debian 13<br />Trixie</span></div>
@@ -52,7 +56,7 @@
 
         <div class="hero-art reveal" aria-label="Vista abstracta del escritorio DC-LINUX">
           <div class="art-frame">
-            <img src="/manus-storage/async-images/SKqlzRkyOwAwh35C597Vvq/image-1.webp" alt="Composición azul y negra inspirada en el escritorio de DC-LINUX" onerror="this.onerror=null;this.src='assets/nucleo-desktop-preview.png'" />
+            <img src="assets/dc-linux-hero-v2.webp" alt="Visual conceptual del escritorio DC-LINUX con tonos azules, barra superior y barra centrada" />
             <div class="art-scanline" aria-hidden="true"></div>
             <div class="art-badge"><span class="pulse"></span> DC-LINUX / LIVE SESSION</div>
             <div class="art-terminal" aria-hidden="true">
@@ -76,7 +80,7 @@
           <div class="intro-copy reveal">
             <p>DC-LINUX es una edición Live ligera basada en Debian 13 (Trixie) y XFCE. Arráncala desde una memoria USB, pruébala sin instalar y decide cuándo hacerla tu sistema.</p>
             <p>Menos ruido, más control. Incluye firmware amplio, NetworkManager, Firefox ESR y la opción de instalador Live de Debian para que el primer contacto sea sencillo y el siguiente paso sea tuyo.</p>
-            <a class="text-link" href="https://github.com/DebianS4/DC-LINUXOS#readme" target="_blank" rel="noreferrer">Leer la documentación <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="https://github.com/DebianS4/DC-LINUXOS#readme" target="_blank" rel="noopener noreferrer">Leer la documentación <span aria-hidden="true">↗</span></a>
           </div>
         </div>
         <div class="system-line" aria-hidden="true"><span></span><b>DC / 001</b><span></span><b>DEBIAN 13</b><span></span></div>
@@ -100,8 +104,8 @@
       </section>
 
       <section class="orbit-section section-pad" aria-labelledby="orbit-title">
-        <div class="orbit-art reveal"><img src="/manus-storage/async-images/SKqlzRkyOwAwh35C597Vvq/image-2.webp" alt="Núcleo abstracto azul de la identidad visual de DC-LINUX" onerror="this.onerror=null;this.src='assets/nucleo-desktop-preview.png'" /><span class="orbit-ring orbit-ring-one"></span><span class="orbit-ring orbit-ring-two"></span><span class="orbit-label">OPEN / SOURCE / SYSTEM</span></div>
-        <div class="orbit-copy reveal"><div class="section-kicker"><span>03</span><span class="rule"></span><span>LA IDEA</span></div><p class="section-overline">No es una distro más.<br />Es tu punto de partida.</p><h2 id="orbit-title">Arranca<br /><span>con intención.</span></h2><p>El proyecto vive en abierto. Puedes revisar cómo se construye la ISO, proponer cambios o tomarlo como base para tu propia exploración Linux.</p><a class="button button-secondary" href="https://github.com/DebianS4/DC-LINUXOS" target="_blank" rel="noreferrer">Explorar en GitHub <span aria-hidden="true">↗</span></a></div>
+        <div class="orbit-art reveal"><img src="assets/dc-linux-orbit-v2.webp" alt="Visual abstracto del núcleo azul de DC-LINUX" loading="lazy" decoding="async" /><span class="orbit-ring orbit-ring-one"></span><span class="orbit-ring orbit-ring-two"></span><span class="orbit-label">OPEN / SOURCE / SYSTEM</span></div>
+        <div class="orbit-copy reveal"><div class="section-kicker"><span>03</span><span class="rule"></span><span>LA IDEA</span></div><p class="section-overline">No es una distro más.<br />Es tu punto de partida.</p><h2 id="orbit-title">Arranca<br /><span>con intención.</span></h2><p>El proyecto vive en abierto. Puedes revisar cómo se construye la ISO, proponer cambios o tomarlo como base para tu propia exploración Linux.</p><a class="button button-secondary" href="https://github.com/DebianS4/DC-LINUXOS" target="_blank" rel="noopener noreferrer">Explorar en GitHub <span aria-hidden="true">↗</span></a></div>
       </section>
 
       <section class="gallery-section section-pad" id="entorno" aria-labelledby="gallery-title">
@@ -109,89 +113,22 @@
         <div class="gallery-heading reveal"><h2 id="gallery-title">Tu escritorio,<br /><span>sin distracciones.</span></h2><p>Un lenguaje visual de negro, azul eléctrico y un golpe de rojo. Sobrio cuando toca. Luminoso cuando importa.</p></div>
         <div class="gallery-grid">
           <figure class="gallery-main reveal"><img src="assets/nucleo-desktop-preview.png" alt="Captura del escritorio Núcleo XFCE de DC-LINUX" /><figcaption><span>CAPTURA / 01</span><b>NÚCLEO XFCE</b><small>La sesión predeterminada</small></figcaption></figure>
-          <figure class="gallery-side reveal"><div class="gallery-side-art"><img src="/manus-storage/async-images/SKqlzRkyOwAwh35C597Vvq/image-2.webp" alt="Detalle abstracto de la interfaz visual de DC-LINUX" onerror="this.onerror=null;this.src='assets/nucleo-desktop-preview.png'" /></div><figcaption><span>ATMÓSFERA / 02</span><b>DEEP BLUE CORE</b><small>Diseñada para enfocar</small></figcaption></figure>
+          <figure class="gallery-side reveal"><div class="gallery-side-art"><img src="assets/dc-linux-gallery-v2.webp" alt="Visual conceptual del escritorio DC-LINUX con cursor rojo y barra centrada" loading="lazy" decoding="async" /></div><figcaption><span>ATMÓSFERA / 02</span><b>DEEP BLUE CORE</b><small>Diseñada para enfocar</small></figcaption></figure>
         </div>
       </section>
 
-      <section class="pi-project-section section-pad" id="raspberry-pi" aria-labelledby="pi-project-title">
-        <div class="section-heading-row">
-          <div class="section-kicker"><span>05</span><span class="rule"></span><span>RASPBERRY PI / DC LABORATORY</span></div>
-          <p class="section-note">Hardware compacto.<br />Diagnóstico OBD-II.</p>
-        </div>
-        <div class="pi-project-heading reveal">
-          <h2 id="pi-project-title">Un proyecto para<br /><span>la Raspberry Pi.</span></h2>
-          <p>Un prototipo de DC Laboratory con un objetivo claro: reunir el panel de diagnóstico del vehículo y una pantalla compacta en una sola unidad.</p>
-        </div>
-        <article class="pi-project-card reveal" aria-labelledby="obd-title">
-          <div class="pi-project-visual" role="img" aria-label="Ilustración conceptual de una interfaz OBD-II para Raspberry Pi Zero W 1.1 y pantalla de 3,5 pulgadas">
-            <div class="pi-project-device">
-              <div class="pi-project-screen">
-                <div class="pi-screen-top"><span>DC LAB / OBD-II</span><span>UI CONCEPT</span></div>
-                <div class="pi-screen-main">
-                  <div class="pi-gauge"><div><small>INTERFAZ</small><strong>OBD-II</strong><small>PANEL DE DIAGNÓSTICO</small></div></div>
-                  <div class="pi-screen-specs"><div><small>PLATAFORMA</small><b>Pi Zero W 1.1</b></div><div><small>PANTALLA</small><b>3,5 pulgadas</b></div></div>
-                </div>
-                <div class="pi-screen-bottom"><span>DC LABORATORY</span><span>RASPBERRY PI</span></div>
-              </div>
-            </div>
-            <span class="pi-visual-caption">ILUSTRACIÓN CONCEPTUAL · SIN DATOS DEL VEHÍCULO</span>
-          </div>
-          <div class="pi-project-copy">
-            <p class="pi-project-label">DC LAB · PROYECTO DE DIAGNÓSTICO</p>
-            <h3 id="obd-title">Panel OBD-II<br /><span>para Raspberry Pi.</span></h3>
-            <p>Interfaz compacta para consultar información de diagnóstico del vehículo mediante OBD-II. Hardware objetivo: Raspberry Pi Zero W 1.1 con pantalla de 3,5 pulgadas.</p>
-            <dl class="pi-project-facts">
-              <div><dt>COMPUTADORA</dt><dd>Raspberry Pi Zero W 1.1</dd></div>
-              <div><dt>PANTALLA</dt><dd>3,5 pulgadas</dd></div>
-              <div><dt>INTERFAZ</dt><dd>OBD-II</dd></div>
-            </dl>
-            <p class="pi-project-note">El código fuente se enlazará cuando se publique el commit; por ahora, los enlaces son referencias técnicas.</p>
-            <div class="pi-project-links" aria-label="Referencias técnicas">
-              <a href="https://www.raspberrypi.com/products/raspberry-pi-zero-w/" target="_blank" rel="noopener noreferrer">Especificaciones oficiales de Pi Zero W <span aria-hidden="true">↗</span></a>
-              <a href="https://kvaser.com/about-can/can-standards/introduction-to-obd-ii/" target="_blank" rel="noopener noreferrer">Introducción técnica a OBD-II <span aria-hidden="true">↗</span></a>
-            </div>
-          </div>
-        </article>
-        <div class="pi-downloads reveal" aria-labelledby="pi-download-title">
-          <div class="pi-download-heading">
-            <div>
-              <p class="pi-download-label">DC-LINUX / IMÁGENES PARA RASPBERRY PI</p>
-              <h3 id="pi-download-title">Descargas<br /><span>por modelo.</span></h3>
-            </div>
-            <p>Ya está publicada la imagen para Raspberry Pi Zero W 1.1. Consulta la guía antes de grabarla; las ediciones para Pi 4 y Pi 5 siguen en evaluación.</p>
-          </div>
-          <div class="pi-download-grid">
-            <article class="pi-download-card">
-              <p class="pi-download-status is-available"><span aria-hidden="true"></span>IMAGEN DISPONIBLE</p>
-              <h4>Edición especial para Raspberry Pi Zero W 1.1.</h4>
-              <a class="pi-download-button is-available" href="https://github.com/DebianS4/DC-LINUXOS/releases/tag/dcecu-pi-zero-w-lite-v1.0.0" target="_blank" rel="noopener noreferrer">Ver imagen y checksum <span aria-hidden="true">↗</span></a>
-            </article>
-            <article class="pi-download-card">
-              <p class="pi-download-status is-evaluating"><span aria-hidden="true"></span>EVALUACIÓN PENDIENTE</p>
-              <h4>Raspberry Pi 4</h4>
-              <p>Falta preparar y probar una compilación específica para su hardware y proceso de arranque.</p>
-              <button class="pi-download-button" type="button" disabled>Compatibilidad en evaluación</button>
-            </article>
-            <article class="pi-download-card">
-              <p class="pi-download-status is-evaluating"><span aria-hidden="true"></span>EVALUACIÓN PENDIENTE</p>
-              <h4>Raspberry Pi 5</h4>
-              <p>Requiere validar el kernel y el arranque para BCM2712 antes de ofrecer una imagen.</p>
-              <button class="pi-download-button" type="button" disabled>Compatibilidad en evaluación</button>
-            </article>
-          </div>
-        </div>
-      </section>
+
 
       <section class="guide-section section-pad" id="guias" aria-labelledby="guide-title">
         <div class="section-heading-row">
-          <div class="section-kicker"><span>06</span><span class="rule"></span><span>DESCARGA / INSTALACIÓN</span></div>
-          <p class="section-note">Dos imágenes.<br />Pasos claros.</p>
+          <div class="section-kicker"><span>05</span><span class="rule"></span><span>DESCARGA / INSTALACIÓN</span></div>
+          <p class="section-note">PC / AMD64.<br />Pasos claros.</p>
         </div>
         <div class="guide-heading reveal">
           <h2 id="guide-title">Elige tu equipo.<br /><span>Sigue la guía.</span></h2>
-          <p>Descarga desde las releases oficiales, comprueba la integridad y prepara el medio de arranque correspondiente.</p>
+          <p>Descarga la ISO de PC desde su release, verifica su SHA-256 y prepara el medio de arranque.</p>
         </div>
-        <div class="guide-grid">
+        <div class="guide-grid guide-grid-single">
           <article class="guide-card reveal" aria-labelledby="guide-pc-title">
             <p class="guide-index">01 / PC · AMD64 · BIOS + UEFI</p>
             <h3 id="guide-pc-title">Núcleo Linux para PC</h3>
@@ -205,27 +142,104 @@
             <p class="guide-warning">La grabación borra la unidad USB seleccionada. Revisa dos veces el destino antes de escribir.</p>
           </article>
 
-          <article class="guide-card reveal" aria-labelledby="guide-pi-title">
-            <p class="guide-index">02 / RASPBERRY PI ZERO W 1.1</p>
-            <h3 id="guide-pi-title">DC-ECU OBD-II Lite</h3>
-            <p class="guide-summary">Imagen comprimida para la Pi Zero W 1.1, prevista para pantalla de 3,5 pulgadas (480 × 320), Wi‑Fi y Bluetooth con adaptador ELM327.</p>
-            <div class="guide-release-links">
-              <a class="guide-release-link" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/dcecu-pi-zero-w-lite-v1.0.0/DC-ECU-PiZeroW-Lite.img.xz" target="_blank" rel="noopener noreferrer">Descargar imagen .img.xz <span aria-hidden="true">↗</span></a>
-              <a class="guide-secondary-link" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/dcecu-pi-zero-w-lite-v1.0.0/DC-ECU-PiZeroW-Lite.img.xz.sha256" target="_blank" rel="noopener noreferrer">Checksum SHA-256 <span aria-hidden="true">↗</span></a>
-            </div>
-            <ol class="guide-steps">
-              <li><strong>Descarga la imagen y su checksum.</strong> Comprueba el archivo en Linux con:<code class="guide-code">sha256sum -c DC-ECU-PiZeroW-Lite.img.xz.sha256</code></li>
-              <li><strong>Descomprime la imagen</strong> con <code>xz -dk DC-ECU-PiZeroW-Lite.img.xz</code> (en Windows puedes usar 7-Zip). El resultado es <code>DC-ECU-PiZeroW-Lite.img</code>.</li>
-              <li><strong>Graba el archivo .img en una microSD</strong> con Raspberry Pi Imager u otra herramienta de imágenes. Inserta la tarjeta y conecta la pantalla de 3,5 pulgadas antes de encender la Pi.</li>
-              <li><strong>Conecta la Pi por Wi‑Fi</strong> para acceder al equipo. Mantén Bluetooth activo para detectar y emparejar el ELM327; vuelve a conectarlo desde Bluetooth si hace falta.</li>
-            </ol>
-            <p class="guide-warning">Grabar la imagen borra la microSD seleccionada. Necesitas una Pi Zero W 1.1, pantalla compatible y adaptador ELM327 Bluetooth (no incluido).</p>
-          </article>
+
         </div>
       </section>
 
       <section class="final-cta section-pad" aria-labelledby="cta-title">
         <div class="cta-grid"><div class="cta-number">DC<br /><span>LINUX</span></div><div class="cta-content reveal"><p class="eyebrow"><span class="eyebrow-dot"></span> LA PRÓXIMA SESIÓN EMPIEZA AQUÍ</p><h2 id="cta-title">Hazlo tuyo.</h2><p>Descubre el proyecto, prueba la ISO y disfruta de un Linux ligero, rápido y seguro.</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/DebianS4/DC-LINUXOS/releases/tag/nucleo-2026-11-04" target="_blank" rel="noopener noreferrer">Ver edición para PC (amd64) <span aria-hidden="true">↗</span></a><a class="button button-ghost" href="https://github.com/DebianS4/DC-LINUXOS" target="_blank" rel="noopener noreferrer">Contribuir al proyecto <span aria-hidden="true">↗</span></a></div></div></div>
+      </section>
+
+      <section class="pi-project-section section-pad" id="raspberry-pi" aria-labelledby="pi-project-title">
+        <div class="section-heading-row">
+          <div class="section-kicker"><span>06</span><span class="rule"></span><span>RASPBERRY PI / DC LABORATORY</span></div>
+          <p class="section-note">Proyectos compactos.<br />Imágenes y descargas por modelo.</p>
+        </div>
+        <div class="rpi-intro reveal">
+          <div>
+            <p class="section-overline">PROYECTOS DC LABORATORY</p>
+            <h2 id="pi-project-title">Raspberry Pi:<br /><span>proyectos y descargas.</span></h2>
+          </div>
+          <p>Imágenes mínimas para Raspberry Pi y un prototipo de diagnóstico OBD-II de DC Laboratory.</p>
+        </div>
+        <figure class="rpi-hero reveal">
+          <img src="assets/rpi-zero-hero-v2.webp" alt="Visual conceptual de un panel OBD-II dentro de un vehículo" loading="lazy" decoding="async" />
+          <span class="rpi-hero-badge">DC LABORATORY / OBD-II</span>
+          <figcaption>PROYECTO OBD-II · VISUAL CONCEPTUAL</figcaption>
+        </figure>
+        <article class="rpi-project-detail reveal" aria-labelledby="obd-title">
+          <div class="rpi-project-image">
+            <img src="assets/rpi-obd-detail-v2.webp" alt="Visual conceptual del hardware OBD-II para Raspberry Pi Zero W 1.1, pantalla de 3,5 pulgadas y adaptador" loading="lazy" decoding="async" />
+            <span>ILUSTRACIÓN CONCEPTUAL · SIN DATOS DEL VEHÍCULO</span>
+          </div>
+          <div class="rpi-project-copy">
+            <p class="pi-project-label">DC LAB · PROYECTO DE DIAGNÓSTICO</p>
+            <h3 id="obd-title">Panel OBD-II<br /><span>para Raspberry Pi.</span></h3>
+            <p>Interfaz compacta para consultar información de diagnóstico del vehículo mediante OBD-II. Hardware objetivo: Raspberry Pi Zero W 1.1 con pantalla de 3,5 pulgadas.</p>
+            <dl class="pi-project-facts">
+              <div><dt>COMPUTADORA</dt><dd>Raspberry Pi Zero W 1.1</dd></div>
+              <div><dt>PANTALLA</dt><dd>3,5 pulgadas</dd></div>
+              <div><dt>INTERFAZ</dt><dd>OBD-II</dd></div>
+            </dl>
+            <p class="pi-project-note">El código fuente del panel aún no está publicado; por ahora, los enlaces son referencias técnicas.</p>
+            <div class="pi-project-links" aria-label="Referencias técnicas">
+              <a href="https://www.raspberrypi.com/products/raspberry-pi-zero-w/" target="_blank" rel="noopener noreferrer">Especificaciones oficiales de Pi Zero W <span aria-hidden="true">↗</span></a>
+              <a href="https://kvaser.com/about-can/can-standards/introduction-to-obd-ii/" target="_blank" rel="noopener noreferrer">Introducción técnica a OBD-II <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+        <div class="pi-downloads reveal" aria-labelledby="pi-download-title">
+          <div class="pi-download-heading">
+            <div>
+              <p class="pi-download-label">DC-LINUX / IMÁGENES MÍNIMAS PARA RASPBERRY PI</p>
+              <h3 id="pi-download-title">Descargas<br /><span>por modelo.</span></h3>
+            </div>
+            <p>Ambas imágenes pasaron las comprobaciones de archivo y de suma SHA-256. Ninguna se ha probado en una Raspberry Pi real.</p>
+          </div>
+          <div class="pi-download-grid">
+            <article class="pi-download-card">
+              <img class="pi-download-image" src="assets/rpi-zero-download-v2.webp" alt="Visual conceptual de una placa compacta y una tarjeta microSD para la edición Zero W" loading="lazy" decoding="async" />
+              <p class="pi-download-status is-available"><span aria-hidden="true"></span>ARCHIVO ÍNTEGRO · SIN PRUEBA EN RASPBERRY PI REAL</p>
+              <h4>Edición especial para Raspberry Pi Zero W 1.1.</h4>
+              <p class="pi-download-meta">ARMv6 · 32 bits · 620 MiB</p>
+              <code class="pi-download-filename">DC-LINUX-PiZeroW-Minimal.img.xz</code>
+              <details class="pi-download-checksum"><summary>SHA-256</summary><code>190acd16661b78087e8fd2968844e1400a18fc33afcdd796d4c264036795c84d</code></details>
+              <a class="pi-download-sidecar" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/rpi-minimal-2026.11.04/DC-LINUX-PiZeroW-Minimal.img.xz.sha256" target="_blank" rel="noopener noreferrer">Descargar checksum (.sha256) <span aria-hidden="true">↗</span></a>
+              <a class="pi-download-button is-available" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/rpi-minimal-2026.11.04/DC-LINUX-PiZeroW-Minimal.img.xz" target="_blank" rel="noopener noreferrer">Descargar imagen (.img.xz) <span aria-hidden="true">↗</span></a>
+            </article>
+            <article class="pi-download-card">
+              <img class="pi-download-image" src="assets/rpi-pi45-download-v2.webp" alt="Visual conceptual de dos placas compactas ARM64 para Raspberry Pi 4 y Raspberry Pi 5" loading="lazy" decoding="async" />
+              <p class="pi-download-status is-available"><span aria-hidden="true"></span>ARCHIVO ÍNTEGRO · SIN PRUEBA EN RASPBERRY PI REAL</p>
+              <h4>Raspberry Pi 4 / Raspberry Pi 5</h4>
+              <p class="pi-download-meta">ARM64 · 64 bits · 588 MiB</p>
+              <code class="pi-download-filename">DC-LINUX-Pi4-Pi5-Minimal.img.xz</code>
+              <details class="pi-download-checksum"><summary>SHA-256</summary><code>07b2cf7e18c6e1601de3cf65b226ab8c57f1218a6253b0a6cb0d5ba1b12bf812</code></details>
+              <a class="pi-download-sidecar" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/rpi-minimal-2026.11.04/DC-LINUX-Pi4-Pi5-Minimal.img.xz.sha256" target="_blank" rel="noopener noreferrer">Descargar checksum (.sha256) <span aria-hidden="true">↗</span></a>
+              <a class="pi-download-button is-available" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/rpi-minimal-2026.11.04/DC-LINUX-Pi4-Pi5-Minimal.img.xz" target="_blank" rel="noopener noreferrer">Descargar imagen (.img.xz) <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+        </div>
+        <div class="pi-install-guide reveal" aria-labelledby="pi-install-title">
+          <div class="pi-install-intro">
+            <p class="pi-download-label">GUÍA RÁPIDA / VERIFICACIÓN Y GRABACIÓN</p>
+            <h3 id="pi-install-title">Verifica antes de grabar.</h3>
+            <p>Descarga cada imagen junto con su archivo .sha256 desde estas tarjetas. Comprueba el hash, descomprime el archivo y graba el .img resultante en una microSD.</p>
+          </div>
+          <div class="pi-install-content">
+            <ol class="pi-install-steps">
+              <li><strong>Verifica los archivos.</strong><pre><code>sha256sum -c DC-LINUX-PiZeroW-Minimal.img.xz.sha256
+sha256sum -c DC-LINUX-Pi4-Pi5-Minimal.img.xz.sha256</code></pre></li>
+              <li><strong>Descomprime la imagen elegida.</strong><pre><code>xz -dk DC-LINUX-PiZeroW-Minimal.img.xz
+xz -dk DC-LINUX-Pi4-Pi5-Minimal.img.xz</code></pre></li>
+              <li><strong>Graba el archivo .img</strong> en una microSD con una herramienta de escritura de imágenes y confirma cuidadosamente la unidad de destino.</li>
+            </ol>
+            <p class="pi-install-warning">Grabar borra la microSD seleccionada. Ninguna de estas imágenes se ha probado en una Raspberry Pi real.</p>
+          </div>
+        </div>
+        <div class="rpi-lab-return">
+          <p>¿Quieres explorar más proyectos de DC Laboratory?</p>
+          <a class="button button-secondary" href="https://gooey.ai/2/keyRb" target="_blank" rel="noopener noreferrer">Regresar al laboratorio <span aria-hidden="true">↗</span></a>
+        </div>
       </section>
     </main>
 
