@@ -35,5 +35,9 @@ jobs:
         run: |
           test -s website/dist/index.html
           test -s website/dist/styles.css
+          test -s website/dist/favicon.ico
+          test -s website/dist/assets/favicon-16x16.png
+          test -s website/dist/assets/favicon-32x32.png
+          test -s website/dist/assets/apple-touch-icon.png
           test -s website/dist/assets/rpi-zero-hero-v2.webp
           test -s website/dist/assets/rpi-pi45-download-v2.webp
