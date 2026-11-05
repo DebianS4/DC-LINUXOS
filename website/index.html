@@ -252,7 +252,7 @@
             <p>Cada imagen incluye una suma SHA-256 para comprobar la integridad del archivo descargado.</p>
           </div>
           <div class="pi-download-grid">
-            <article class="pi-download-card">
+            <article class="pi-download-card pi-download-card--zero">
               <img class="pi-download-image" src="assets/rpi-zero-download-v2.webp" alt="Visual conceptual de una placa compacta y una tarjeta microSD para la edición Zero W" loading="lazy" decoding="async" />
               <p class="pi-download-status is-available"><span aria-hidden="true"></span>DESCARGA EN RELEASE · SHA-256 DISPONIBLE</p>
               <h4>Edición especial para Raspberry Pi Zero W 1.1.</h4>
@@ -260,9 +260,14 @@
               <code class="pi-download-filename">DC-LINUX-PiZeroW-Minimal.img.xz</code>
               <details class="pi-download-checksum"><summary>SHA-256</summary><code>190acd16661b78087e8fd2968844e1400a18fc33afcdd796d4c264036795c84d</code></details>
               <a class="pi-download-sidecar" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/rpi-minimal-2026.11.04/DC-LINUX-PiZeroW-Minimal.img.xz.sha256" target="_blank" rel="noopener noreferrer">Descargar checksum (.sha256) <span aria-hidden="true">↗</span></a>
+              <div class="pi-download-tools" aria-label="Herramientas para grabar la imagen de Raspberry Pi Zero W 1.1">
+                <span class="pi-download-tools-label">GRABAR CON</span>
+                <a href="https://www.balena.io/etcher" target="_blank" rel="noopener noreferrer">balenaEtcher <span aria-hidden="true">↗</span></a>
+                <a href="https://www.raspberrypi.com/software/" target="_blank" rel="noopener noreferrer">Raspberry Pi Imager <span aria-hidden="true">↗</span></a>
+              </div>
               <a class="pi-download-button is-available download-pulse" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/rpi-minimal-2026.11.04/DC-LINUX-PiZeroW-Minimal.img.xz" target="_blank" rel="noopener noreferrer">Descargar imagen (.img.xz) <span aria-hidden="true">↗</span></a>
             </article>
-            <article class="pi-download-card">
+            <article class="pi-download-card pi-download-card--pi45">
               <img class="pi-download-image" src="assets/rpi-pi45-download-v2.webp" alt="Visual conceptual de dos placas compactas ARM64 para Raspberry Pi 4 y Raspberry Pi 5" loading="lazy" decoding="async" />
               <p class="pi-download-status is-available"><span aria-hidden="true"></span>DESCARGA EN RELEASE · SHA-256 DISPONIBLE</p>
               <h4>Raspberry Pi 4 / Raspberry Pi 5</h4>
@@ -270,6 +275,11 @@
               <code class="pi-download-filename">DC-LINUX-Pi4-Pi5-Minimal.img.xz</code>
               <details class="pi-download-checksum"><summary>SHA-256</summary><code>07b2cf7e18c6e1601de3cf65b226ab8c57f1218a6253b0a6cb0d5ba1b12bf812</code></details>
               <a class="pi-download-sidecar" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/rpi-minimal-2026.11.04/DC-LINUX-Pi4-Pi5-Minimal.img.xz.sha256" target="_blank" rel="noopener noreferrer">Descargar checksum (.sha256) <span aria-hidden="true">↗</span></a>
+              <div class="pi-download-tools" aria-label="Herramientas para grabar la imagen de Raspberry Pi 4 y Pi 5">
+                <span class="pi-download-tools-label">GRABAR CON</span>
+                <a href="https://www.balena.io/etcher" target="_blank" rel="noopener noreferrer">balenaEtcher <span aria-hidden="true">↗</span></a>
+                <a href="https://www.raspberrypi.com/software/" target="_blank" rel="noopener noreferrer">Raspberry Pi Imager <span aria-hidden="true">↗</span></a>
+              </div>
               <a class="pi-download-button is-available download-pulse" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/rpi-minimal-2026.11.04/DC-LINUX-Pi4-Pi5-Minimal.img.xz" target="_blank" rel="noopener noreferrer">Descargar imagen (.img.xz) <span aria-hidden="true">↗</span></a>
             </article>
           </div>
@@ -286,9 +296,9 @@
 sha256sum -c DC-LINUX-Pi4-Pi5-Minimal.img.xz.sha256</code></pre></li>
               <li><strong>Descomprime la imagen elegida.</strong><pre><code>xz -dk DC-LINUX-PiZeroW-Minimal.img.xz
 xz -dk DC-LINUX-Pi4-Pi5-Minimal.img.xz</code></pre></li>
-              <li><strong>Graba el archivo .img</strong> en una microSD con una herramienta de escritura de imágenes y confirma cuidadosamente la unidad de destino.</li>
+              <li><strong>Graba el archivo .img</strong> con cualquiera de las herramientas enlazadas en la tarjeta del modelo elegido y confirma cuidadosamente la unidad de destino.</li>
             </ol>
-            <p class="pi-install-warning">Escribir la imagen sobrescribe la microSD seleccionada. Comprueba el dispositivo de destino y haz una copia de seguridad antes de continuar.</p>
+            <p class="pi-install-warning">Grabar la imagen sobrescribe la USB o microSD seleccionada. Confirma el dispositivo de destino y guarda una copia de seguridad antes de continuar.</p>
           </div>
         </div>
         <div class="rpi-lab-return">
