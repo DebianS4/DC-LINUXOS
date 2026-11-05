@@ -2,15 +2,21 @@ const menuButton = document.querySelector('.menu-toggle');
 const mainNav = document.querySelector('#main-nav');
 
 if (menuButton && mainNav) {
+  const menuLabel = menuButton.querySelector('.sr-only');
+  const setMenuState = (isOpen) => {
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+    if (menuLabel) menuLabel.textContent = isOpen ? 'Cerrar menú' : 'Abrir menú';
+  };
+
   menuButton.addEventListener('click', () => {
     const isOpen = mainNav.classList.toggle('is-open');
-    menuButton.setAttribute('aria-expanded', String(isOpen));
+    setMenuState(isOpen);
   });
 
   mainNav.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
       mainNav.classList.remove('is-open');
-      menuButton.setAttribute('aria-expanded', 'false');
+      setMenuState(false);
     });
   });
 }
