@@ -4,6 +4,7 @@
   <p>Una edición Live ligera basada en Debian 13 (Trixie), con escritorio XFCE.</p>
 🔗https://debians4.github.io/DC-LINUXOS/
   <p>
+🔗https://gooey.ai/2/keyRb
     <a href="https://github.com/DebianS4/DC-LINUXOS/releases/tag/nucleo-2026-11-04"><img src="https://img.shields.io/badge/Release-N%C3%BAcleo%20Linux%201.0-0A66C2?style=for-the-badge&logo=github&logoColor=white" alt="Release Núcleo Linux 1.0"></a>
     <img src="https://img.shields.io/badge/Arquitectura-amd64-2563EB?style=for-the-badge" alt="Arquitectura amd64">
     <img src="https://img.shields.io/badge/Escritorio-XFCE-168DE2?style=for-the-badge&logo=xfce&logoColor=white" alt="Escritorio XFCE">
