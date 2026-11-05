@@ -78,8 +78,12 @@ class SiteParser(HTMLParser):
             rel = set(attributes.get("rel", "").lower().split())
             parsed = urlsplit(href)
 
+            if parsed.netloc and not parsed.scheme:
+                self.errors.append(f"Protocol-relative external link is not allowed: {href}")
             if parsed.scheme and parsed.scheme.lower() != "https":
                 self.errors.append(f"Non-HTTPS link found: {href}")
+            if parsed.scheme.lower() == "https" and not parsed.netloc:
+                self.errors.append(f"HTTPS link must include a host: {href}")
             if target == "_blank" and not {"noopener", "noreferrer"}.issubset(rel):
                 self.errors.append(f"New-tab link must use rel=noopener noreferrer: {href}")
 

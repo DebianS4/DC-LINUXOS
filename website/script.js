@@ -7,6 +7,11 @@ if (menuButton && mainNav) {
     menuButton.setAttribute('aria-expanded', String(isOpen));
     if (menuLabel) menuLabel.textContent = isOpen ? 'Cerrar menú' : 'Abrir menú';
   };
+  const closeMenu = (restoreFocus = false) => {
+    mainNav.classList.remove('is-open');
+    setMenuState(false);
+    if (restoreFocus) menuButton.focus();
+  };
 
   menuButton.addEventListener('click', () => {
     const isOpen = mainNav.classList.toggle('is-open');
@@ -14,10 +19,13 @@ if (menuButton && mainNav) {
   });
 
   mainNav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      mainNav.classList.remove('is-open');
-      setMenuState(false);
-    });
+    link.addEventListener('click', () => closeMenu());
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && mainNav.classList.contains('is-open')) {
+      closeMenu(true);
+    }
   });
 }
 

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <div class="noise" aria-hidden="true"></div>
     <header class="site-header" id="inicio">
       <a class="brand" href="#inicio" aria-label="DC-LINUX, inicio">
@@ -41,7 +42,7 @@
       </nav>
     </header>
 
-    <main>
+    <main id="contenido" tabindex="-1">
       <section class="hero section-pad" aria-labelledby="hero-title">
         <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
         <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
@@ -133,13 +134,32 @@
           <h2 id="guide-title">Elige tu equipo.<br /><span>Sigue la guía.</span></h2>
           <p>Descarga la edición que corresponde a tu equipo, verifica su SHA-256 y prepara una USB o una microSD.</p>
         </div>
-        <div class="download-security" aria-label="Medidas de seguridad de las descargas">
-          <div class="download-security-badges">
-            <span class="security-badge"><span aria-hidden="true">✓</span> SITIO HTTPS</span>
-            <span class="security-badge"><span aria-hidden="true">✓</span> SHA-256 PUBLICADO</span>
-            <span class="security-badge"><span aria-hidden="true">✓</span> RELEASES OFICIALES DEL PROYECTO</span>
+        <div class="download-security" aria-labelledby="download-security-title">
+          <div class="download-security-heading">
+            <div>
+              <p class="download-security-label">EVIDENCIA PÚBLICA / 03</p>
+              <h3 id="download-security-title">Señales que puedes comprobar.</h3>
+            </div>
+            <p class="download-security-summary">El build del sitio es obligatorio para los cambios que llegan a main; los enlaces y sumas apuntan a fuentes públicas.</p>
           </div>
-          <p>Compara el SHA-256 después de descargar. Ayuda a detectar diferencias respecto al valor publicado; no sustituye una firma digital ni autentica por sí solo quién publicó el archivo.</p>
+          <div class="download-security-badges">
+            <a class="security-badge" href="https://github.com/DebianS4/DC-LINUXOS/actions/workflows/site-checks.yml" target="_blank" rel="noopener noreferrer">
+              <span class="security-badge-code" aria-hidden="true">CI</span>
+              <span class="security-badge-copy"><strong>BUILD</strong><small>check requerido en PR a main</small></span>
+              <span class="security-badge-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="security-badge" href="https://debians4.github.io/DC-LINUXOS/" target="_blank" rel="noopener noreferrer">
+              <span class="security-badge-code" aria-hidden="true">TLS</span>
+              <span class="security-badge-copy"><strong>HTTPS + HSTS</strong><small>redirección HTTPS activa</small></span>
+              <span class="security-badge-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="security-badge" href="https://github.com/DebianS4/DC-LINUXOS/releases" target="_blank" rel="noopener noreferrer">
+              <span class="security-badge-code" aria-hidden="true">SHA</span>
+              <span class="security-badge-copy"><strong>SHA-256</strong><small>checksum por descarga</small></span>
+              <span class="security-badge-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <p class="download-security-note">HTTPS/HSTS protege el transporte. SHA-256 permite comparar cada archivo con la suma publicada; no sustituye una firma digital ni prueba por sí solo la autoría.</p>
         </div>
         <div class="guide-grid guide-grid-single">
           <article class="guide-card reveal pc-amd64-card" aria-labelledby="guide-pc-title">
@@ -182,7 +202,7 @@
                   <a class="guide-secondary-link" href="https://github.com/DebianS4/DC-LINUXOS/releases/tag/rpi4-desktop-2026.11.04" target="_blank" rel="noopener noreferrer">Ver release y notas <span aria-hidden="true">↗</span></a>
                 </div>
               </div>
-              <p class="guide-warning pi4-verification-note">La descarga incluye un archivo SHA-256 para que compruebes la imagen antes de grabarla. Escribir sobrescribe la microSD elegida; confirma el destino antes de continuar.</p>
+              <p class="guide-warning pi4-verification-note">Verifica el SHA-256 publicado antes de grabar. Escribir sobrescribe la microSD elegida; confirma el destino antes de continuar.</p>
             </div>
             <div class="pi4-card-media" aria-label="Vistas de la edición Raspberry Pi 4">
               <figure class="pi4-preview">
@@ -313,7 +333,7 @@
 sha256sum -c DC-LINUX-Pi4-Pi5-Minimal.img.xz.sha256</code></pre></li>
               <li><strong>Descomprime la imagen elegida.</strong><pre><code>xz -dk DC-LINUX-PiZeroW-Minimal.img.xz
 xz -dk DC-LINUX-Pi4-Pi5-Minimal.img.xz</code></pre></li>
-              <li><strong>Graba el archivo .img</strong> con cualquiera de las herramientas enlazadas en la tarjeta del modelo elegido y confirma cuidadosamente la unidad de destino.</li>
+              <li><strong>Graba el archivo .img</strong> para cualquiera de las dos imágenes con <a href="https://www.balena.io/etcher" target="_blank" rel="noopener noreferrer">balenaEtcher</a> o <a href="https://www.raspberrypi.com/software/" target="_blank" rel="noopener noreferrer">Raspberry Pi Imager</a>, y confirma cuidadosamente la unidad de destino.</li>
             </ol>
             <p class="pi-install-warning">Grabar la imagen sobrescribe la USB o microSD seleccionada. Confirma el dispositivo de destino y guarda una copia de seguridad antes de continuar.</p>
           </div>

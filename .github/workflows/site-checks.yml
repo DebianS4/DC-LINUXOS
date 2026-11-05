@@ -9,6 +9,7 @@ on:
       - "website/**"
       - ".github/workflows/site-checks.yml"
       - ".github/workflows/pages.yml"
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -29,6 +30,8 @@ jobs:
       - name: Build static website
         working-directory: website
         run: sh build.sh
+      - name: Test preview server route policy
+        run: python3 website/check_preview_server.py
       - name: Verify Pages artifact
         run: |
           test -s website/dist/index.html
