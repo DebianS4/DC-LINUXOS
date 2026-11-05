@@ -216,6 +216,9 @@ h1, h2, h3, p { margin-top: 0; }.hero h1 { margin: 0; font: 500 clamp(58px, 8.1v
 .rpi-intro h2 { margin: 18px 0 0; font: 500 clamp(42px, 5.7vw, 80px)/.96 var(--display); letter-spacing: -.065em; }
 .rpi-intro h2 span { color: var(--blue-bright); }
 .rpi-intro > p { max-width: 430px; margin: 0 0 5px; color: var(--muted); font-size: 14px; line-height: 1.75; }
+.rpi-heading-lockup { display: flex; align-items: center; gap: clamp(14px, 2.2vw, 28px); min-width: 0; }
+.rpi-heading-copy { min-width: 0; }
+.rpi-edition-logo { width: clamp(92px, 11vw, 142px); aspect-ratio: 1; flex: 0 0 auto; object-fit: contain; border: 1px solid rgba(91, 196, 255, .36); background: #03060b; box-shadow: 0 0 34px rgba(0, 134, 255, .24); }
 .rpi-hero { position: relative; min-height: 330px; aspect-ratio: 2.35 / 1; margin: 0 0 17px; overflow: hidden; border: 1px solid rgba(126, 192, 255, .35); background: #061224; box-shadow: 0 24px 70px rgba(0, 0, 0, .3); }
 .rpi-hero::after { position: absolute; inset: 0; content: ""; pointer-events: none; background: linear-gradient(90deg, rgba(3, 8, 17, .6), transparent 58%), linear-gradient(0deg, rgba(3, 8, 17, .7), transparent 40%); }
 .rpi-hero img { width: 100%; height: 100%; min-height: 330px; object-fit: cover; object-position: center; opacity: .9; }
@@ -268,6 +271,8 @@ h1, h2, h3, p { margin-top: 0; }.hero h1 { margin: 0; font: 500 clamp(58px, 8.1v
   .pi-project-section { padding-top: 86px; padding-bottom: 90px; }
   .rpi-intro { grid-template-columns: 1fr; gap: 18px; margin: 44px 0 30px; }
   .rpi-intro h2 { font-size: clamp(40px, 12vw, 62px); }
+  .rpi-heading-lockup { align-items: flex-start; gap: 12px; }
+  .rpi-edition-logo { width: clamp(68px, 20vw, 92px); }
   .rpi-intro > p { font-size: 13px; }
   .rpi-hero { min-height: 245px; aspect-ratio: 1.2 / 1; }
   .rpi-hero img { min-height: 245px; object-position: 58% center; }
