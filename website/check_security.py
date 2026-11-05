@@ -35,6 +35,7 @@ class SiteParser(HTMLParser):
         self.csp: str | None = None
         self.referrer_policy: str | None = None
         self.release_downloads: set[str] = set()
+        self.release_sidecars: set[str] = set()
         self.visible_hashes: list[str] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
@@ -45,6 +46,11 @@ class SiteParser(HTMLParser):
                 self.errors.append("Inline style attributes are not allowed by the site CSP.")
             if name.startswith("on") and len(name) > 2:
                 self.errors.append(f"Inline event handler is not allowed: {name}.")
+
+        if tag == "style":
+            self.errors.append("Inline style blocks are not allowed; use the local stylesheet.")
+        if tag in {"iframe", "frame", "object", "embed", "form"}:
+            self.errors.append(f"Blocked embedded or form content is not allowed: <{tag}>.")
 
         if tag == "meta":
             if attributes.get("http-equiv", "").lower() == "content-security-policy":
@@ -83,6 +89,8 @@ class SiteParser(HTMLParser):
                 if not parsed.path.startswith("/DebianS4/DC-LINUXOS/releases/download/"):
                     self.errors.append(f"Release download is outside the expected repository: {href}")
                 self.release_downloads.add(parsed.path)
+                if parsed.path.endswith(".sha256"):
+                    self.release_sidecars.add(parsed.path)
 
         if tag == "code":
             self._in_code = True
@@ -154,6 +162,7 @@ def main() -> int:
                 errors.append(str(exc))
 
         downloads = parser.release_downloads
+        expected_sidecars: set[str] = set()
         if not downloads:
             errors.append("No GitHub Release downloads were found.")
         for path in sorted(downloads):
@@ -163,8 +172,11 @@ def main() -> int:
                 sidecar = path.rsplit(".part", 1)[0] + ".sha256"
             else:
                 continue
+            expected_sidecars.add(sidecar)
             if sidecar not in downloads:
                 errors.append(f"Download has no matching SHA-256 sidecar link: {path}")
+        for path in sorted(parser.release_sidecars - expected_sidecars):
+            errors.append(f"SHA-256 link has no matching downloadable artifact: {path}")
 
         if len(parser.visible_hashes) < 3:
             errors.append("Expected visible 64-character SHA-256 values are missing.")
@@ -175,6 +187,14 @@ def main() -> int:
         file_path = artifact / name
         if file_path.is_file() and file_path.stat().st_size == 0:
             errors.append(f"Build output is empty: {name}")
+
+    stylesheet = artifact / "styles.css"
+    if stylesheet.is_file():
+        css = stylesheet.read_text(encoding="utf-8")
+        if re.search(r"@import\b", css, re.IGNORECASE):
+            errors.append("Remote or imported stylesheets are not allowed.")
+        if re.search(r"url\(\s*['\"]?\s*(?:https?:)?//", css, re.IGNORECASE):
+            errors.append("Remote CSS assets are not allowed; keep assets same-origin.")
 
     if errors:
         print("Site security checks failed:", file=sys.stderr)
