@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import json
 import re
 import sys
 from html.parser import HTMLParser
@@ -17,7 +18,7 @@ EXPECTED_CSP = {
     "frame-src": ["'none'"],
     "worker-src": ["'none'"],
     "media-src": ["'none'"],
-    "manifest-src": ["'none'"],
+    "manifest-src": ["'self'"],
     "img-src": ["'self'", "data:"],
     "script-src": ["'self'"],
     "style-src": ["'self'"],
@@ -34,6 +35,7 @@ class SiteParser(HTMLParser):
         self.errors: list[str] = []
         self.csp: str | None = None
         self.referrer_policy: str | None = None
+        self.manifest_href: str | None = None
         self.release_downloads: set[str] = set()
         self.release_sidecars: set[str] = set()
         self.visible_hashes: list[str] = []
@@ -78,6 +80,10 @@ class SiteParser(HTMLParser):
 
         if tag == "link" and attributes.get("href"):
             self._check_local_resource("link href", attributes["href"])
+            if "manifest" in attributes.get("rel", "").lower().split():
+                if self.manifest_href is not None:
+                    self.errors.append("More than one web manifest link was found.")
+                self.manifest_href = attributes["href"]
 
         if tag == "a":
             href = attributes.get("href", "")
@@ -147,7 +153,7 @@ def main() -> int:
         print(f"Build artifact directory not found: {artifact}", file=sys.stderr)
         return 1
 
-    expected_root = {"assets", "index.html", "styles.css", "script.js", "favicon.ico", "favicon.svg"}
+    expected_root = {"assets", "index.html", "styles.css", "script.js", "favicon.ico", "favicon.svg", "manifest.webmanifest"}
     actual_root = {entry.name for entry in artifact.iterdir()}
     for name in sorted(expected_root - actual_root):
         errors.append(f"Required build output is missing: {name}")
@@ -155,9 +161,9 @@ def main() -> int:
         errors.append(f"Unexpected file or directory in public build: {name}")
 
     html_path = artifact / "index.html"
+    parser = SiteParser()
     if html_path.is_file():
         source = html_path.read_text(encoding="utf-8")
-        parser = SiteParser()
         parser.feed(source)
         parser.close()
         errors.extend(parser.errors)
@@ -204,6 +210,46 @@ def main() -> int:
             errors.append("Expected visible 64-character SHA-256 values are missing.")
     else:
         errors.append("Build artifact index.html is missing.")
+
+    if parser.manifest_href != "manifest.webmanifest":
+        errors.append("The page must link the same-origin manifest.webmanifest file.")
+
+    manifest_path = artifact / "manifest.webmanifest"
+    if manifest_path.is_file():
+        try:
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+            errors.append(f"Web manifest is not valid UTF-8 JSON: {exc}")
+        else:
+            icons = manifest.get("icons") if isinstance(manifest, dict) else None
+            if not isinstance(icons, list) or not icons:
+                errors.append("Web manifest must declare at least one icon.")
+            else:
+                declared_sizes: set[str] = set()
+                for icon in icons:
+                    if not isinstance(icon, dict):
+                        errors.append("Web manifest icon entries must be objects.")
+                        continue
+                    src = icon.get("src")
+                    if not isinstance(src, str):
+                        errors.append("Web manifest icon src must be a relative path.")
+                        continue
+                    parsed_src = urlsplit(src)
+                    icon_parts = Path(parsed_src.path).parts
+                    if parsed_src.scheme or parsed_src.netloc or parsed_src.path.startswith("/") or ".." in icon_parts:
+                        errors.append(f"Web manifest icon must be a safe relative path: {src}")
+                        continue
+                    icon_path = artifact.joinpath(*icon_parts)
+                    if not icon_path.is_file():
+                        errors.append(f"Web manifest icon file is missing: {src}")
+                    if icon.get("type") != "image/png":
+                        errors.append(f"Web manifest icon must use image/png: {src}")
+                    sizes = icon.get("sizes", "")
+                    if isinstance(sizes, str):
+                        declared_sizes.update(sizes.split())
+                missing_sizes = {"192x192", "512x512"} - declared_sizes
+                if missing_sizes:
+                    errors.append(f"Web manifest is missing required icon sizes: {', '.join(sorted(missing_sizes))}")
 
     for name in expected_root - {"assets"}:
         file_path = artifact / name

@@ -1,0 +1,23 @@
+{
+  "id": "./",
+  "name": "DC-LINUX — Debian 13 · XFCE · PC y Raspberry Pi",
+  "short_name": "DC-LINUX",
+  "lang": "es-MX",
+  "start_url": "./",
+  "scope": "./",
+  "display": "browser",
+  "background_color": "#061227",
+  "theme_color": "#061227",
+  "icons": [
+    {
+      "src": "assets/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
