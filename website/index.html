@@ -132,11 +132,16 @@
           <p>Descarga la edición que corresponde a tu equipo, verifica su SHA-256 y prepara una USB o una microSD.</p>
         </div>
         <div class="guide-grid guide-grid-single">
-          <article class="guide-card reveal" aria-labelledby="guide-pc-title">
+          <article class="guide-card reveal pc-amd64-card" aria-labelledby="guide-pc-title">
             <p class="guide-index">01 / PC · AMD64 · BIOS + UEFI</p>
             <h3 id="guide-pc-title">Núcleo Linux para PC</h3>
             <p class="guide-summary">ISO híbrida basada en Debian 13 y XFCE. Como cada archivo tiene un límite de tamaño, la ISO se descarga en dos partes.</p>
-            <a class="guide-release-link" href="https://github.com/DebianS4/DC-LINUXOS/releases/tag/nucleo-2026-11-04" target="_blank" rel="noopener noreferrer">Abrir release y descargar los 3 archivos <span aria-hidden="true">↗</span></a>
+            <div class="pc-download-actions" aria-label="Descargas directas para PC AMD64">
+              <a class="button button-primary pc-download-part download-pulse" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/nucleo-2026-11-04/live-image-amd64.hybrid.iso.part00" target="_blank" rel="noopener noreferrer">Descargar parte 1 (.part00) <span aria-hidden="true">↓</span></a>
+              <a class="button button-primary pc-download-part download-pulse" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/nucleo-2026-11-04/live-image-amd64.hybrid.iso.part01" target="_blank" rel="noopener noreferrer">Descargar parte 2 (.part01) <span aria-hidden="true">↓</span></a>
+              <a class="guide-secondary-link pc-download-checksum" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/nucleo-2026-11-04/live-image-amd64.hybrid.iso.sha256" target="_blank" rel="noopener noreferrer">Descargar checksum SHA-256 (.sha256) <span aria-hidden="true">↗</span></a>
+              <a class="guide-secondary-link pc-download-release" href="https://github.com/DebianS4/DC-LINUXOS/releases/tag/nucleo-2026-11-04" target="_blank" rel="noopener noreferrer">Ver release y notas <span aria-hidden="true">↗</span></a>
+            </div>
             <ol class="guide-steps">
               <li><strong>Descarga las dos partes y el checksum.</strong> Guarda juntos <code>live-image-amd64.hybrid.iso.part00</code>, <code>live-image-amd64.hybrid.iso.part01</code> y <code>live-image-amd64.hybrid.iso.sha256</code>.</li>
               <li><strong>Une y verifica la ISO</strong> desde esa carpeta con Linux, macOS o WSL:<code class="guide-code">cat live-image-amd64.hybrid.iso.part00 live-image-amd64.hybrid.iso.part01 &gt; live-image-amd64.hybrid.iso</code>Comprueba el checksum con <code>sha256sum -c live-image-amd64.hybrid.iso.sha256</code> en Linux/WSL o <code>shasum -a 256 -c live-image-amd64.hybrid.iso.sha256</code> en macOS.<span class="guide-hash">SHA-256 esperado: <code>94e3e87f82210501c812ad7a3b062ff6620eee5e56c07cdf192542463b9d9e47</code></span></li>
@@ -161,7 +166,7 @@
                 <li><strong>TAMAÑO</strong><span>~533 MiB</span></li>
               </ul>
               <div class="pi4-download-actions">
-                <a class="button button-primary pi4-download-main" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/rpi4-desktop-2026.11.04/DC-LINUXOS-RaspberryPi4-arm64.img.xz" target="_blank" rel="noopener noreferrer">Descargar imagen (.img.xz) <span aria-hidden="true">↓</span></a>
+                <a class="button button-primary pi4-download-main download-pulse" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/rpi4-desktop-2026.11.04/DC-LINUXOS-RaspberryPi4-arm64.img.xz" target="_blank" rel="noopener noreferrer">Descargar imagen (.img.xz) <span aria-hidden="true">↓</span></a>
                 <div class="pi4-secondary-actions">
                   <a class="guide-secondary-link" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/rpi4-desktop-2026.11.04/DC-LINUXOS-RaspberryPi4-arm64.img.xz.sha256" target="_blank" rel="noopener noreferrer">Descargar checksum SHA-256 <span aria-hidden="true">↗</span></a>
                   <a class="guide-secondary-link" href="https://github.com/DebianS4/DC-LINUXOS/releases/tag/rpi4-desktop-2026.11.04" target="_blank" rel="noopener noreferrer">Ver release y notas <span aria-hidden="true">↗</span></a>
@@ -213,7 +218,7 @@
           <span class="rpi-hero-badge">DC LABORATORY / OBD-II</span>
           <figcaption>PANEL OBD-II · DISEÑO DE DC LABORATORY</figcaption>
         </figure>
-        <article class="rpi-project-detail reveal" aria-labelledby="obd-title">
+        <article class="rpi-project-detail reveal obd-edition-card" aria-labelledby="obd-title">
           <div class="rpi-project-image">
             <img src="assets/rpi-obd-detail-v2.webp" alt="Diseño visual del panel OBD-II para Raspberry Pi Zero W 1.1 con pantalla de 3,5 pulgadas" loading="lazy" decoding="async" />
             <span>DISEÑO DEL PANEL OBD-II</span>
@@ -230,6 +235,11 @@
             <div class="pi-project-links" aria-label="Referencias técnicas">
               <a href="https://www.raspberrypi.com/products/raspberry-pi-zero-w/" target="_blank" rel="noopener noreferrer">Especificaciones oficiales de Pi Zero W <span aria-hidden="true">↗</span></a>
               <a href="https://kvaser.com/about-can/can-standards/introduction-to-obd-ii/" target="_blank" rel="noopener noreferrer">Introducción técnica a OBD-II <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="obd-download-actions" aria-label="Descarga directa de la imagen OBD-II">
+              <code>DC-ECU-PiZeroW-Lite.img.xz</code>
+              <a class="button button-primary obd-download-main download-pulse" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/dcecu-pi-zero-w-lite-v1.0.0/DC-ECU-PiZeroW-Lite.img.xz" target="_blank" rel="noopener noreferrer">Descargar imagen OBD-II (.img.xz) <span aria-hidden="true">↓</span></a>
+              <a class="obd-checksum-link" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/dcecu-pi-zero-w-lite-v1.0.0/DC-ECU-PiZeroW-Lite.img.xz.sha256" target="_blank" rel="noopener noreferrer">Descargar checksum SHA-256 (.sha256) <span aria-hidden="true">↗</span></a>
             </div>
           </div>
         </article>
@@ -250,7 +260,7 @@
               <code class="pi-download-filename">DC-LINUX-PiZeroW-Minimal.img.xz</code>
               <details class="pi-download-checksum"><summary>SHA-256</summary><code>190acd16661b78087e8fd2968844e1400a18fc33afcdd796d4c264036795c84d</code></details>
               <a class="pi-download-sidecar" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/rpi-minimal-2026.11.04/DC-LINUX-PiZeroW-Minimal.img.xz.sha256" target="_blank" rel="noopener noreferrer">Descargar checksum (.sha256) <span aria-hidden="true">↗</span></a>
-              <a class="pi-download-button is-available" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/rpi-minimal-2026.11.04/DC-LINUX-PiZeroW-Minimal.img.xz" target="_blank" rel="noopener noreferrer">Descargar imagen (.img.xz) <span aria-hidden="true">↗</span></a>
+              <a class="pi-download-button is-available download-pulse" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/rpi-minimal-2026.11.04/DC-LINUX-PiZeroW-Minimal.img.xz" target="_blank" rel="noopener noreferrer">Descargar imagen (.img.xz) <span aria-hidden="true">↗</span></a>
             </article>
             <article class="pi-download-card">
               <img class="pi-download-image" src="assets/rpi-pi45-download-v2.webp" alt="Visual conceptual de dos placas compactas ARM64 para Raspberry Pi 4 y Raspberry Pi 5" loading="lazy" decoding="async" />
@@ -260,7 +270,7 @@
               <code class="pi-download-filename">DC-LINUX-Pi4-Pi5-Minimal.img.xz</code>
               <details class="pi-download-checksum"><summary>SHA-256</summary><code>07b2cf7e18c6e1601de3cf65b226ab8c57f1218a6253b0a6cb0d5ba1b12bf812</code></details>
               <a class="pi-download-sidecar" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/rpi-minimal-2026.11.04/DC-LINUX-Pi4-Pi5-Minimal.img.xz.sha256" target="_blank" rel="noopener noreferrer">Descargar checksum (.sha256) <span aria-hidden="true">↗</span></a>
-              <a class="pi-download-button is-available" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/rpi-minimal-2026.11.04/DC-LINUX-Pi4-Pi5-Minimal.img.xz" target="_blank" rel="noopener noreferrer">Descargar imagen (.img.xz) <span aria-hidden="true">↗</span></a>
+              <a class="pi-download-button is-available download-pulse" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/rpi-minimal-2026.11.04/DC-LINUX-Pi4-Pi5-Minimal.img.xz" target="_blank" rel="noopener noreferrer">Descargar imagen (.img.xz) <span aria-hidden="true">↗</span></a>
             </article>
           </div>
         </div>
