@@ -9,6 +9,7 @@ on:
       - "website/**"
       - ".github/workflows/site-checks.yml"
       - ".github/workflows/pages.yml"
+  workflow_dispatch:
 
 permissions:
   contents: read
