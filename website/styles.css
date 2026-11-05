@@ -886,3 +886,153 @@ section[id] { scroll-margin-top: 92px; }
   .download-security-badges { grid-template-columns: 1fr; gap: 7px; }
   .security-badge { min-height: 61px; }
 }
+
+
+/* Remasterización final: materiales de Lucy integrados con la identidad original. */
+.site-header {
+  border-bottom-color: rgba(137, 202, 255, .2);
+  background: rgba(3, 10, 23, .86);
+}
+.brand-logo {
+  width: 42px;
+  height: 42px;
+  flex-basis: 42px;
+  object-fit: contain;
+  border-radius: 50%;
+  border-color: rgba(139, 202, 255, .62);
+  background: #02050b;
+  box-shadow: 0 0 24px rgba(50, 151, 255, .34), inset 0 0 0 2px rgba(2, 8, 18, .65);
+}
+.hero {
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 82% 24%, rgba(21, 120, 224, .28), transparent 34%),
+    linear-gradient(112deg, rgba(3, 9, 19, .95) 0%, rgba(4, 17, 36, .79) 54%, rgba(2, 10, 23, .9) 100%),
+    linear-gradient(119deg, #050912 0%, #071426 52%, #071c39 100%);
+}
+.hero-wallpaper {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  margin: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.hero-wallpaper img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 43%;
+  opacity: .24;
+  mix-blend-mode: screen;
+  mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .32) 24%, #000 72%);
+}
+.hero-content, .hero-art { z-index: 1; }
+.hero-display { border-color: rgba(124, 202, 255, .48); }
+.hero-display > img { border-color: rgba(116, 195, 255, .4); }
+.gallery-wallpaper {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(240px, .8fr);
+  align-items: center;
+  gap: clamp(20px, 4vw, 58px);
+  margin: 32px 0 0;
+  padding: clamp(11px, 1.8vw, 18px);
+  border: 1px solid rgba(126, 192, 255, .28);
+  border-radius: 8px;
+  background: linear-gradient(125deg, rgba(8, 25, 48, .96), rgba(3, 8, 16, .96));
+  box-shadow: 0 20px 56px rgba(0, 0, 0, .27);
+}
+.gallery-wallpaper > img {
+  width: 100%;
+  aspect-ratio: 1080 / 631;
+  object-fit: contain;
+  border: 1px solid rgba(114, 193, 255, .24);
+  border-radius: 4px;
+  background: #06152b;
+}
+.gallery-wallpaper figcaption { display: grid; gap: 9px; }
+.gallery-wallpaper figcaption span {
+  color: #86d9ff;
+  font: 8px/1.45 var(--mono);
+  letter-spacing: .13em;
+}
+.gallery-wallpaper figcaption strong {
+  color: var(--white);
+  font: 500 clamp(20px, 2.7vw, 31px)/1.12 var(--display);
+  letter-spacing: -.04em;
+}
+.gallery-wallpaper figcaption small { color: var(--muted); font-size: 12px; line-height: 1.65; }
+.rpi-artwork-pair {
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+  gap: 14px;
+  margin: 0 0 22px;
+}
+.rpi-artwork-pair figure {
+  position: relative;
+  min-width: 0;
+  height: clamp(220px, 25vw, 340px);
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(126, 192, 255, .3);
+  border-radius: 8px;
+  background: #030711;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, .24);
+}
+.rpi-artwork-pair img { width: 100%; height: 100%; object-fit: cover; }
+.rpi-artwork-supplied img {
+  object-fit: contain;
+  padding: 10px;
+  background: radial-gradient(ellipse at 50% 45%, rgba(0, 37, 255, .25), transparent 67%), #02040b;
+}
+.rpi-artwork-pair figcaption {
+  position: absolute;
+  right: 9px;
+  bottom: 9px;
+  left: 9px;
+  display: grid;
+  gap: 4px;
+  padding: 8px 10px;
+  background: rgba(2, 7, 15, .86);
+  color: #dcecff;
+  font: 8px/1.45 var(--mono);
+  letter-spacing: .06em;
+}
+.rpi-artwork-pair figcaption span { color: #83d7ff; font-size: 7px; letter-spacing: .12em; }
+.pi4-hash, .obd-hash {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+  margin: 12px 0 0;
+  padding: 10px 12px;
+  background: rgba(3, 8, 16, .72);
+  overflow-wrap: anywhere;
+}
+.pi4-hash { border-left: 2px solid #ff6b84; }
+.pi4-hash span { color: #ff9cad; font: 600 8px/1.45 var(--mono); letter-spacing: .08em; }
+.pi4-hash code { color: #f1cbd2; font: 8px/1.55 var(--mono); overflow-wrap: anywhere; }
+.obd-hash { border-left: 2px solid #69e0b7; }
+.obd-hash span { color: #9cebd2; font: 600 8px/1.45 var(--mono); letter-spacing: .08em; }
+.obd-hash code { color: #c8f3e4; font: 8px/1.55 var(--mono); overflow-wrap: anywhere; }
+
+@media (max-width: 900px) {
+  .hero-wallpaper img { opacity: .18; object-position: 57% center; }
+  .rpi-artwork-pair { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 650px) {
+  .brand-logo { width: 35px; height: 35px; flex-basis: 35px; }
+  .hero-wallpaper img {
+    opacity: .15;
+    object-position: 56% top;
+    mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .45) 58%, transparent 100%);
+  }
+  .gallery-wallpaper { grid-template-columns: 1fr; gap: 16px; margin-top: 24px; }
+  .gallery-wallpaper > img { aspect-ratio: 1080 / 631; }
+  .gallery-wallpaper figcaption { padding: 2px 3px 5px; }
+  .rpi-artwork-pair { grid-template-columns: 1fr; gap: 10px; margin-bottom: 17px; }
+  .rpi-artwork-pair figure { height: clamp(215px, 68vw, 280px); }
+  .pi4-hash, .obd-hash { padding: 9px 10px; }
+  .pi4-hash code, .obd-hash code { font-size: 7px; }
+}

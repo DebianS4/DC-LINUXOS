@@ -19,7 +19,7 @@
     <div class="noise" aria-hidden="true"></div>
     <header class="site-header" id="inicio">
       <a class="brand" href="#inicio" aria-label="DC-LINUX, inicio">
-        <img class="brand-logo" src="assets/dc-linux-logo.webp" alt="Logo de DC-LINUX" />
+        <img class="brand-logo" src="assets/lucy-dc-emblem.webp" alt="Emblema DC suministrado por Lucy" />
         <span class="brand-copy"><strong>DC-LINUX</strong><small>EDICIÓN LIVE</small></span>
       </a>
       <div class="site-clock" aria-label="Hora local en este dispositivo">
@@ -46,6 +46,7 @@
       <section class="hero section-pad" aria-labelledby="hero-title">
         <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
         <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+        <figure class="hero-wallpaper" aria-hidden="true"><img src="assets/lucy-deep-blue-wallpaper.webp" alt="" fetchpriority="high" /></figure>
         <div class="hero-content reveal">
           <p class="eyebrow"><span class="eyebrow-dot"></span> DEBIAN 13 · TRIXIE · XFCE</p>
           <h1 id="hero-title">Tu Linux.<br /><span>A tu manera.</span></h1>
@@ -121,6 +122,10 @@
           <figure class="gallery-main reveal"><img src="assets/nucleo-desktop-preview.png" alt="Vista previa del escritorio Núcleo XFCE de DC-LINUX" /><figcaption><span>VISTA PREVIA / 01</span><b>NÚCLEO XFCE</b><small>Escritorio XFCE de Núcleo Linux</small></figcaption></figure>
           <figure class="gallery-side reveal"><div class="gallery-side-art"><img src="assets/dc-linux-gallery-v2.webp" alt="Visual conceptual del escritorio DC-LINUX con cursor rojo y barra centrada" loading="lazy" decoding="async" /></div><figcaption><span>ATMÓSFERA / 02</span><b>DEEP BLUE CORE</b><small>Diseñada para enfocar</small></figcaption></figure>
         </div>
+        <figure class="gallery-wallpaper reveal">
+          <img src="assets/lucy-deep-blue-wallpaper.webp" alt="Fondo azul profundo suministrado por Lucy, con el emblema DC al centro superior" loading="lazy" decoding="async" />
+          <figcaption><span>FONDO SUMINISTRADO / 03</span><strong>Deep Blue · el escritorio que inspira esta edición</strong><small>Mostrado junto al escritorio y al arte original de DC-LINUX.</small></figcaption>
+        </figure>
       </section>
 
 
@@ -210,6 +215,7 @@
                   <a class="guide-secondary-link" href="https://github.com/DebianS4/DC-LINUXOS/releases/tag/rpi4-desktop-2026.11.04" target="_blank" rel="noopener noreferrer">Ver release y notas <span aria-hidden="true">↗</span></a>
                 </div>
               </div>
+              <p class="pi4-hash"><span>SHA-256 publicado para la imagen .img.xz</span><code>6e489d859f8d3b99b443d33eb417461f3d50c216974d5c201c54701fb71479b5</code></p>
               <p class="guide-warning pi4-verification-note">Verifica el SHA-256 publicado antes de grabar. Escribir sobrescribe la microSD elegida; confirma el destino antes de continuar.</p>
             </div>
             <div class="pi4-card-media" aria-label="Vistas de la edición Raspberry Pi 4">
@@ -251,6 +257,10 @@
           </div>
           <p>Imágenes mínimas para Raspberry Pi y un panel de diagnóstico OBD-II de DC Laboratory.</p>
         </div>
+        <div class="rpi-artwork-pair reveal" aria-label="Arte suministrado y visual original para Raspberry Pi">
+          <figure class="rpi-artwork-supplied"><img src="assets/lucy-raspberry-pi-neon.webp" alt="Ilustración luminosa de Raspberry Pi suministrada por Lucy" loading="lazy" decoding="async" /><figcaption><span>ARTE SUMINISTRADO / 01</span>RASPBERRY PI · NEON BLUE</figcaption></figure>
+          <figure class="rpi-artwork-original"><img src="assets/rpi-pi45-download-v2.webp" alt="Visual original de DC-LINUX para las ediciones Raspberry Pi 4 y Pi 5" loading="lazy" decoding="async" /><figcaption><span>VISUAL ORIGINAL / 02</span>PLATAFORMA ARM64</figcaption></figure>
+        </div>
         <figure class="rpi-hero reveal">
           <img src="assets/rpi-zero-hero-v2.webp" alt="Diseño visual de un panel de diagnóstico OBD-II dentro de un vehículo" loading="lazy" decoding="async" />
           <span class="rpi-hero-badge">DC LABORATORY / OBD-II</span>
@@ -278,6 +288,7 @@
               <code>DC-ECU-PiZeroW-Lite.img.xz</code>
               <a class="button button-primary obd-download-main download-pulse" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/dcecu-pi-zero-w-lite-v1.0.0/DC-ECU-PiZeroW-Lite.img.xz" target="_blank" rel="noopener noreferrer">Descargar imagen OBD-II (.img.xz) <span aria-hidden="true">↓</span></a>
               <a class="obd-checksum-link" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/dcecu-pi-zero-w-lite-v1.0.0/DC-ECU-PiZeroW-Lite.img.xz.sha256" target="_blank" rel="noopener noreferrer">Descargar checksum SHA-256 (.sha256) <span aria-hidden="true">↗</span></a>
+              <p class="obd-hash"><span>SHA-256 publicado</span><code>18e7ea4f0c42fb0a8c3e1407da76d986cb5365899075b66d7e00cf16f94e5499</code></p>
             </div>
           </div>
         </article>
@@ -353,7 +364,7 @@ xz -dk DC-LINUX-Pi4-Pi5-Minimal.img.xz</code></pre></li>
       </section>
     </main>
 
-    <footer class="site-footer section-pad"><a class="brand" href="#inicio"><img class="brand-logo" src="assets/dc-linux-logo.webp" alt="Logo de DC-LINUX" /><span class="brand-copy"><strong>DC-LINUX</strong><small>EDICIÓN LIVE</small></span></a><p>Construido sobre Debian. Diseñado para avanzar.</p><div class="footer-meta"><span>© <span id="year"></span> DC-LINUX</span><span>AMD64 / RASPBERRY PI / DC LAB</span></div></footer>
+    <footer class="site-footer section-pad"><a class="brand" href="#inicio"><img class="brand-logo" src="assets/lucy-dc-emblem.webp" alt="Emblema DC suministrado por Lucy" /><span class="brand-copy"><strong>DC-LINUX</strong><small>EDICIÓN LIVE</small></span></a><p>Construido sobre Debian. Diseñado para avanzar.</p><div class="footer-meta"><span>© <span id="year"></span> DC-LINUX</span><span>AMD64 / RASPBERRY PI / DC LAB</span></div></footer>
     <script src="script.js"></script>
   </body>
 </html>
