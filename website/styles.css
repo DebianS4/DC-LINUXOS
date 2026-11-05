@@ -1038,3 +1038,49 @@ section[id] { scroll-margin-top: 92px; }
   .pi4-hash, .obd-hash { padding: 9px 10px; }
   .pi4-hash code, .obd-hash code { font-size: 7px; }
 }
+
+
+/* Lienzo centrado para pantallas ultra-wide, con detalles CSS que escalan sin rasterizar. */
+.section-pad {
+  padding-inline: max(clamp(24px, 7vw, 112px), calc(50vw - 1280px));
+}
+.site-header {
+  padding-inline: max(clamp(20px, 5.5vw, 92px), calc(50vw - 1280px));
+}
+@media (min-width: 2880px) {
+  .hero-wallpaper img {
+    inset: 0 auto 0 50%;
+    width: min(100%, 1680px);
+    transform: translateX(-50%);
+    mask-image: radial-gradient(ellipse at center, #000 12%, rgba(0, 0, 0, .74) 57%, transparent 100%);
+  }
+}
+@media (min-width: 2560px) {
+  body { font-size: 18px; }
+  .site-header { height: 96px; }
+  .brand-logo { width: 48px; height: 48px; flex-basis: 48px; }
+  .brand-copy strong { font-size: 17px; }
+  .main-nav { gap: clamp(24px, 1.7vw, 40px); font-size: 12px; }
+  .site-clock time { font-size: 15px; }
+  .hero { min-height: 940px; padding-top: 155px; padding-bottom: 125px; }
+  .hero-content { max-width: 1020px; }
+  .hero h1 { font-size: clamp(124px, 3.8vw, 150px); }
+  .hero-lede { max-width: 620px; font-size: 18px; }
+  .hero-specs span { font-size: 12px; }
+  .intro h2, .feature-intro h2, .gallery-heading h2, .orbit-copy h2,
+  .guide-heading h2, .rpi-intro h2 { font-size: clamp(78px, 3.5vw, 104px); }
+  .section-kicker { font-size: 12px; }
+  .section-note { font-size: 13px; }
+  .feature-card { min-height: 350px; padding: 30px; }
+  .feature-card h3 { font-size: 25px; }
+  .feature-card p { max-width: 300px; font-size: 14px; }
+  .guide-summary, .pi4-card-copy > .guide-summary { font-size: 15px; }
+  .download-security-summary, .download-security-note { font-size: 14px; }
+  .pi-project-copy > p:not(.pi-project-label), .rpi-intro > p { font-size: 16px; }
+  .pi-download-card h4 { font-size: 29px; }
+  .pi-download-card > p:not(.pi-download-status) { font-size: 14px; }
+}
+@media (max-width: 650px) {
+  .section-pad { padding-inline: 19px; }
+  .site-header { padding-inline: 17px; }
+}

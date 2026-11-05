@@ -70,7 +70,7 @@ def main() -> int:
         expect(headers.get("x-frame-options") == "DENY", "X-Frame-Options DENY is required.")
         expect("frame-ancestors 'none'" in headers.get("content-security-policy", ""), "CSP must block framing.")
 
-        for path in ("/assets/dc-linux-logo.webp", "/manus-routes.json"):
+        for path in ("/assets/dc-linux-logo.webp", "/manus-routes.json", "/favicon.svg"):
             expect(request(port, path)[0] == 200, f"Public route must work: {path}")
         for path in ("/server.js", "/package.json"):
             expect(request(port, path)[0] == 404, f"Source/config route must not be served: {path}")

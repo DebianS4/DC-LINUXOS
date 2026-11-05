@@ -8,6 +8,7 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'self'; object-src 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; media-src 'none'; manifest-src 'none'; img-src 'self' data:; script-src 'self'; style-src 'self'; style-src-attr 'none'; font-src 'self'; connect-src 'none'; upgrade-insecure-requests" />
     <meta name="description" content="Conoce DC-LINUX: edición Live basada en Debian 13 y XFCE, con descargas SHA-256 para PC y Raspberry Pi, guías claras y proyectos DC Laboratory." />
     <title>DC-LINUX — Debian 13 · XFCE · PC y Raspberry Pi</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
     <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48" type="image/x-icon" />
@@ -46,7 +47,7 @@
       <section class="hero section-pad" aria-labelledby="hero-title">
         <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
         <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
-        <figure class="hero-wallpaper" aria-hidden="true"><img src="assets/lucy-deep-blue-wallpaper.webp" alt="" fetchpriority="high" /></figure>
+        <figure class="hero-wallpaper" aria-hidden="true"><img src="assets/lucy-deep-blue-wallpaper.webp" srcset="assets/lucy-deep-blue-wallpaper-540.webp 540w, assets/lucy-deep-blue-wallpaper-810.webp 810w, assets/lucy-deep-blue-wallpaper.webp 1080w" sizes="100vw" alt="" fetchpriority="high" /></figure>
         <div class="hero-content reveal">
           <p class="eyebrow"><span class="eyebrow-dot"></span> DEBIAN 13 · TRIXIE · XFCE</p>
           <h1 id="hero-title">Tu Linux.<br /><span>A tu manera.</span></h1>
@@ -66,11 +67,11 @@
         <div class="hero-art reveal" aria-label="Escritorio suministrado y visual original de DC-LINUX">
           <figure class="hero-display">
             <div class="hero-display-topline"><span><i></i> SESIÓN EN VIVO</span><span>AMD64 / XFCE</span></div>
-            <img src="assets/nucleo-desktop-preview.png" alt="Captura del escritorio Núcleo XFCE: fondo azul, reloj en el panel superior, cursor rojo brillante y barra de aplicaciones centrada" fetchpriority="high" />
+            <img src="assets/nucleo-desktop-preview.png" srcset="assets/nucleo-desktop-preview-480.webp 480w, assets/nucleo-desktop-preview-960.webp 960w, assets/nucleo-desktop-preview-1440.webp 1440w" sizes="(max-width: 900px) calc(100vw - 58px), (min-width: 2880px) 1080px, 46vw" alt="Captura del escritorio Núcleo XFCE: fondo azul, reloj en el panel superior, cursor rojo brillante y barra de aplicaciones centrada" fetchpriority="high" />
             <figcaption><span>ESCRITORIO SUMINISTRADO</span><span>FONDO AZUL · CURSOR ROJO · DOCK CENTRAL</span></figcaption>
           </figure>
           <figure class="hero-original">
-            <img src="assets/dc-linux-hero-v2.webp" alt="Visual original de DC-LINUX: monitor con escritorio azul y cursor rojo" loading="lazy" decoding="async" />
+            <img src="assets/dc-linux-hero-v2.webp" srcset="assets/dc-linux-hero-v2-640.webp 640w, assets/dc-linux-hero-v2-1120.webp 1120w, assets/dc-linux-hero-v2.webp 1600w" sizes="(max-width: 650px) 144px, 218px" alt="Visual original de DC-LINUX: monitor con escritorio azul y cursor rojo" loading="lazy" decoding="async" />
             <figcaption><span>VISUAL ORIGINAL</span><strong>Una identidad que también se reconoce de lejos.</strong></figcaption>
           </figure>
           <div class="hero-stamp"><span class="pulse"></span><span>DEBIAN 13<br /><b>XFCE / LIVE</b></span></div>
@@ -111,7 +112,7 @@
       </section>
 
       <section class="orbit-section section-pad" aria-labelledby="orbit-title">
-        <div class="orbit-art reveal"><img src="assets/dc-linux-orbit-v2.webp" alt="Visual abstracto del núcleo azul de DC-LINUX" loading="lazy" decoding="async" /><span class="orbit-ring orbit-ring-one"></span><span class="orbit-ring orbit-ring-two"></span><span class="orbit-label">DEBIAN / XFCE / AMD64</span></div>
+        <div class="orbit-art reveal"><img src="assets/dc-linux-orbit-v2.webp" srcset="assets/dc-linux-orbit-v2-480.webp 480w, assets/dc-linux-orbit-v2-900.webp 900w, assets/dc-linux-orbit-v2.webp 1200w" sizes="(max-width: 650px) 84vw, 410px" alt="Visual abstracto del núcleo azul de DC-LINUX" loading="lazy" decoding="async" /><span class="orbit-ring orbit-ring-one"></span><span class="orbit-ring orbit-ring-two"></span><span class="orbit-label">DEBIAN / XFCE / AMD64</span></div>
         <div class="orbit-copy reveal"><div class="section-kicker"><span>03</span><span class="rule"></span><span>LA IDEA</span></div><p class="section-overline">CÓDIGO PÚBLICO.<br />CONSTRUCCIÓN VISIBLE.</p><h2 id="orbit-title">Revisa el proceso.<br /><span>Propón cambios.</span></h2><p>El repositorio es público. Consulta el script y la configuración que construyen la ISO; puedes proponer cambios mediante issues o pull requests.</p><a class="button button-secondary" href="https://github.com/DebianS4/DC-LINUXOS/blob/main/build.sh" target="_blank" rel="noopener noreferrer">Ver script de compilación <span aria-hidden="true">↗</span></a></div>
       </section>
 
@@ -119,11 +120,11 @@
         <div class="section-heading-row"><div class="section-kicker"><span>04</span><span class="rule"></span><span>EL ENTORNO</span></div><p class="section-note">Una sesión limpia.<br />Un pulso azul.</p></div>
         <div class="gallery-heading reveal"><h2 id="gallery-title">Tu escritorio,<br /><span>sin distracciones.</span></h2><p>Un lenguaje visual de negro, azul eléctrico y un golpe de rojo. Sobrio cuando toca. Luminoso cuando importa.</p></div>
         <div class="gallery-grid">
-          <figure class="gallery-main reveal"><img src="assets/nucleo-desktop-preview.png" alt="Vista previa del escritorio Núcleo XFCE de DC-LINUX" /><figcaption><span>VISTA PREVIA / 01</span><b>NÚCLEO XFCE</b><small>Escritorio XFCE de Núcleo Linux</small></figcaption></figure>
-          <figure class="gallery-side reveal"><div class="gallery-side-art"><img src="assets/dc-linux-gallery-v2.webp" alt="Visual conceptual del escritorio DC-LINUX con cursor rojo y barra centrada" loading="lazy" decoding="async" /></div><figcaption><span>ATMÓSFERA / 02</span><b>DEEP BLUE CORE</b><small>Diseñada para enfocar</small></figcaption></figure>
+          <figure class="gallery-main reveal"><img src="assets/nucleo-desktop-preview.png" srcset="assets/nucleo-desktop-preview-480.webp 480w, assets/nucleo-desktop-preview-960.webp 960w, assets/nucleo-desktop-preview-1440.webp 1440w" sizes="(max-width: 650px) calc(100vw - 38px), (max-width: 900px) 62vw, (min-width: 2880px) 1440px, 65vw" alt="Vista previa del escritorio Núcleo XFCE de DC-LINUX" /><figcaption><span>VISTA PREVIA / 01</span><b>NÚCLEO XFCE</b><small>Escritorio XFCE de Núcleo Linux</small></figcaption></figure>
+          <figure class="gallery-side reveal"><div class="gallery-side-art"><img src="assets/dc-linux-gallery-v2.webp" srcset="assets/dc-linux-gallery-v2-640.webp 640w, assets/dc-linux-gallery-v2-1000.webp 1000w, assets/dc-linux-gallery-v2.webp 1400w" sizes="(max-width: 650px) calc(100vw - 38px), (max-width: 900px) 34vw, (min-width: 2880px) 700px, 32vw" alt="Visual conceptual del escritorio DC-LINUX con cursor rojo y barra centrada" loading="lazy" decoding="async" /></div><figcaption><span>ATMÓSFERA / 02</span><b>DEEP BLUE CORE</b><small>Diseñada para enfocar</small></figcaption></figure>
         </div>
         <figure class="gallery-wallpaper reveal">
-          <img src="assets/lucy-deep-blue-wallpaper.webp" alt="Fondo azul profundo suministrado por Lucy, con el emblema DC al centro superior" loading="lazy" decoding="async" />
+          <img src="assets/lucy-deep-blue-wallpaper.webp" srcset="assets/lucy-deep-blue-wallpaper-540.webp 540w, assets/lucy-deep-blue-wallpaper-810.webp 810w, assets/lucy-deep-blue-wallpaper.webp 1080w" sizes="(max-width: 650px) calc(100vw - 60px), (max-width: 900px) 55vw, (min-width: 2880px) 1440px, 55vw" alt="Fondo azul profundo suministrado por Lucy, con el emblema DC al centro superior" loading="lazy" decoding="async" />
           <figcaption><span>FONDO SUMINISTRADO / 03</span><strong>Deep Blue · el escritorio que inspira esta edición</strong><small>Mostrado junto al escritorio y al arte original de DC-LINUX.</small></figcaption>
         </figure>
       </section>
@@ -196,7 +197,7 @@
           <article class="guide-card reveal pi4-desktop-card" id="pi4-desktop" aria-labelledby="guide-pi4-title">
             <div class="pi4-card-copy">
               <div class="pi4-card-title">
-                <img class="pi4-edition-logo" src="assets/rpi-edition-logo.png" alt="Logotipo de Raspberry Pi suministrado" loading="lazy" decoding="async" />
+                <img class="pi4-edition-logo" src="assets/rpi-edition-logo.png" srcset="assets/rpi-edition-logo-96.webp 96w, assets/rpi-edition-logo-192.webp 192w, assets/rpi-edition-logo-320.webp 320w, assets/rpi-edition-logo-720.webp 720w" sizes="(max-width: 650px) 48px, 58px" alt="Logotipo de Raspberry Pi suministrado" loading="lazy" decoding="async" />
                 <div>
                   <p class="guide-index">02 / RASPBERRY PI 4 · ESCRITORIO · ARM64</p>
                   <h3 id="guide-pi4-title">Núcleo Linux<br /><span>para Raspberry Pi 4.</span></h3>
@@ -220,15 +221,15 @@
             </div>
             <div class="pi4-card-media" aria-label="Vistas de la edición Raspberry Pi 4">
               <figure class="pi4-preview">
-                <img src="assets/dc-linuxos-raspberry-pi-4-preview.png" alt="Vista de diseño del escritorio Núcleo XFCE con fondo azul, cursor rojo, reloj superior y barra centrada" loading="lazy" decoding="async" />
+                <img src="assets/dc-linuxos-raspberry-pi-4-preview.png" srcset="assets/dc-linuxos-raspberry-pi-4-preview-512.webp 512w, assets/dc-linuxos-raspberry-pi-4-preview-1024.webp 1024w, assets/dc-linuxos-raspberry-pi-4-preview-1528.webp 1528w" sizes="(max-width: 650px) calc(100vw - 72px), (max-width: 900px) 44vw, (min-width: 2880px) 1200px, 42vw" alt="Vista de diseño del escritorio Núcleo XFCE con fondo azul, cursor rojo, reloj superior y barra centrada" loading="lazy" decoding="async" />
                 <figcaption>VISTA DE DISEÑO · XFCE PARA RASPBERRY PI 4</figcaption>
               </figure>
               <figure class="pi4-editorial">
-                <img src="assets/rpi4-desktop-editorial.webp" alt="Visual original de una computadora ARM compacta conectada a un monitor con escritorio azul" loading="lazy" decoding="async" />
+                <img src="assets/rpi4-desktop-editorial.webp" srcset="assets/rpi4-desktop-editorial-640.webp 640w, assets/rpi4-desktop-editorial-1280.webp 1280w, assets/rpi4-desktop-editorial.webp 2304w" sizes="(max-width: 650px) calc((100vw - 82px) / 2), (max-width: 900px) 28vw, (min-width: 2880px) 560px, 26vw" alt="Visual original de una computadora ARM compacta conectada a un monitor con escritorio azul" loading="lazy" decoding="async" />
                 <figcaption>VISUAL ORIGINAL / ESCRITORIO</figcaption>
               </figure>
               <figure class="pi4-detail">
-                <img src="assets/rpi4-desktop-board-detail.webp" alt="Visual original conceptual de una placa compacta y una tarjeta microSD" loading="lazy" decoding="async" />
+                <img src="assets/rpi4-desktop-board-detail.webp" srcset="assets/rpi4-desktop-board-detail-640.webp 640w, assets/rpi4-desktop-board-detail-1280.webp 1280w, assets/rpi4-desktop-board-detail.webp 1920w" sizes="(max-width: 650px) calc((100vw - 82px) / 2), (max-width: 900px) 28vw, (min-width: 2880px) 560px, 26vw" alt="Visual original conceptual de una placa compacta y una tarjeta microSD" loading="lazy" decoding="async" />
                 <figcaption>VISUAL ORIGINAL / ARM64</figcaption>
               </figure>
               <figure class="pi4-user-visual">
@@ -253,7 +254,7 @@
         </div>
         <div class="rpi-intro reveal">
           <div class="rpi-heading-lockup">
-            <img class="rpi-edition-logo" src="assets/rpi-edition-logo.png" alt="Emblema de la edición Raspberry Pi de DC-LINUX" loading="lazy" decoding="async" />
+            <img class="rpi-edition-logo" src="assets/rpi-edition-logo.png" srcset="assets/rpi-edition-logo-96.webp 96w, assets/rpi-edition-logo-192.webp 192w, assets/rpi-edition-logo-320.webp 320w, assets/rpi-edition-logo-720.webp 720w" sizes="(max-width: 650px) 86px, (min-width: 2880px) 142px, 11vw" alt="Emblema de la edición Raspberry Pi de DC-LINUX" loading="lazy" decoding="async" />
             <div class="rpi-heading-copy">
               <p class="section-overline">PROYECTOS DC LABORATORY</p>
               <h2 id="pi-project-title">Raspberry Pi:<br /><span>proyectos y descargas.</span></h2>
@@ -262,17 +263,17 @@
           <p>Imágenes mínimas para Raspberry Pi y un panel de diagnóstico OBD-II de DC Laboratory.</p>
         </div>
         <div class="rpi-artwork-pair reveal" aria-label="Arte suministrado y visual original para Raspberry Pi">
-          <figure class="rpi-artwork-supplied"><img src="assets/lucy-raspberry-pi-neon.webp" alt="Ilustración luminosa de Raspberry Pi suministrada por Lucy" loading="lazy" decoding="async" /><figcaption><span>ARTE SUMINISTRADO / 01</span>RASPBERRY PI · NEON BLUE</figcaption></figure>
-          <figure class="rpi-artwork-original"><img src="assets/rpi-pi45-download-v2.webp" alt="Visual original de DC-LINUX para las ediciones Raspberry Pi 4 y Pi 5" loading="lazy" decoding="async" /><figcaption><span>VISUAL ORIGINAL / 02</span>PLATAFORMA ARM64</figcaption></figure>
+          <figure class="rpi-artwork-supplied"><img src="assets/lucy-raspberry-pi-neon.webp" srcset="assets/lucy-raspberry-pi-neon-360.webp 360w, assets/lucy-raspberry-pi-neon.webp 720w" sizes="(max-width: 650px) calc(100vw - 38px), (min-width: 2880px) 960px, 38vw" alt="Ilustración luminosa de Raspberry Pi suministrada por Lucy" loading="lazy" decoding="async" /><figcaption><span>ARTE SUMINISTRADO / 01</span>RASPBERRY PI · NEON BLUE</figcaption></figure>
+          <figure class="rpi-artwork-original"><img src="assets/rpi-pi45-download-v2.webp" srcset="assets/rpi-pi45-download-v2-480.webp 480w, assets/rpi-pi45-download-v2-960.webp 960w, assets/rpi-pi45-download-v2.webp 1600w" sizes="(max-width: 650px) calc(100vw - 38px), (min-width: 2880px) 1360px, 54vw" alt="Visual original de DC-LINUX para las ediciones Raspberry Pi 4 y Pi 5" loading="lazy" decoding="async" /><figcaption><span>VISUAL ORIGINAL / 02</span>PLATAFORMA ARM64</figcaption></figure>
         </div>
         <figure class="rpi-hero reveal">
-          <img src="assets/rpi-zero-hero-v2.webp" alt="Diseño visual de un panel de diagnóstico OBD-II dentro de un vehículo" loading="lazy" decoding="async" />
+          <img src="assets/rpi-zero-hero-v2.webp" srcset="assets/rpi-zero-hero-v2-640.webp 640w, assets/rpi-zero-hero-v2-1280.webp 1280w, assets/rpi-zero-hero-v2.webp 1800w" sizes="(max-width: 650px) calc(100vw - 38px), (min-width: 2880px) 2300px, 92vw" alt="Diseño visual de un panel de diagnóstico OBD-II dentro de un vehículo" loading="lazy" decoding="async" />
           <span class="rpi-hero-badge">DC LABORATORY / OBD-II</span>
           <figcaption>PANEL OBD-II · DISEÑO DE DC LABORATORY</figcaption>
         </figure>
         <article class="rpi-project-detail reveal obd-edition-card" aria-labelledby="obd-title">
           <div class="rpi-project-image">
-            <img src="assets/rpi-obd-detail-v2.webp" alt="Diseño visual del panel OBD-II para Raspberry Pi Zero W 1.1 con pantalla de 3,5 pulgadas" loading="lazy" decoding="async" />
+            <img src="assets/rpi-obd-detail-v2.webp" srcset="assets/rpi-obd-detail-v2-640.webp 640w, assets/rpi-obd-detail-v2-1120.webp 1120w, assets/rpi-obd-detail-v2.webp 1400w" sizes="(max-width: 900px) calc(100vw - 64px), (min-width: 2880px) 1020px, 43vw" alt="Diseño visual del panel OBD-II para Raspberry Pi Zero W 1.1 con pantalla de 3,5 pulgadas" loading="lazy" decoding="async" />
             <span>DISEÑO DEL PANEL OBD-II</span>
           </div>
           <div class="rpi-project-copy">
@@ -306,7 +307,7 @@
           </div>
           <div class="pi-download-grid">
             <article class="pi-download-card pi-download-card--zero">
-              <img class="pi-download-image" src="assets/rpi-zero-download-v2.webp" alt="Visual conceptual de una placa compacta y una tarjeta microSD para la edición Zero W" loading="lazy" decoding="async" />
+              <img class="pi-download-image" src="assets/rpi-zero-download-v2.webp" srcset="assets/rpi-zero-download-v2-480.webp 480w, assets/rpi-zero-download-v2-960.webp 960w, assets/rpi-zero-download-v2.webp 1600w" sizes="(max-width: 650px) calc(100vw - 68px), (max-width: 1080px) 44vw, (min-width: 2880px) 760px, 30vw" alt="Visual conceptual de una placa compacta y una tarjeta microSD para la edición Zero W" loading="lazy" decoding="async" />
               <p class="pi-download-status is-available"><span aria-hidden="true"></span>DESCARGA EN RELEASE · SHA-256 DISPONIBLE</p>
               <h4>Edición especial para Raspberry Pi Zero W 1.1.</h4>
               <p class="pi-download-meta">ARMv6 · 32 bits · 620 MiB</p>
@@ -321,7 +322,7 @@
               <a class="pi-download-button is-available download-pulse" href="https://github.com/DebianS4/DC-LINUXOS/releases/download/rpi-minimal-2026.11.04/DC-LINUX-PiZeroW-Minimal.img.xz" target="_blank" rel="noopener noreferrer">Descargar imagen (.img.xz) <span aria-hidden="true">↗</span></a>
             </article>
             <article class="pi-download-card pi-download-card--pi45">
-              <img class="pi-download-image" src="assets/rpi-pi45-download-v2.webp" alt="Visual conceptual de dos placas compactas ARM64 para Raspberry Pi 4 y Raspberry Pi 5" loading="lazy" decoding="async" />
+              <img class="pi-download-image" src="assets/rpi-pi45-download-v2.webp" srcset="assets/rpi-pi45-download-v2-480.webp 480w, assets/rpi-pi45-download-v2-960.webp 960w, assets/rpi-pi45-download-v2.webp 1600w" sizes="(max-width: 650px) calc(100vw - 68px), (max-width: 1080px) 44vw, (min-width: 2880px) 760px, 30vw" alt="Visual conceptual de dos placas compactas ARM64 para Raspberry Pi 4 y Raspberry Pi 5" loading="lazy" decoding="async" />
               <p class="pi-download-status is-available"><span aria-hidden="true"></span>DESCARGA EN RELEASE · SHA-256 DISPONIBLE</p>
               <h4>Raspberry Pi 4 / Raspberry Pi 5</h4>
               <p class="pi-download-meta">ARM64 · 64 bits · 588 MiB</p>
@@ -368,7 +369,7 @@ xz -dk DC-LINUX-Pi4-Pi5-Minimal.img.xz</code></pre></li>
       </section>
     </main>
 
-    <footer class="site-footer section-pad"><a class="brand" href="#inicio"><img class="brand-logo" src="assets/lucy-dc-emblem.webp" alt="Emblema DC suministrado por Lucy" /><span class="brand-copy"><strong>DC-LINUX</strong><small>EDICIÓN LIVE</small></span></a><p>Construido sobre Debian. Diseñado para avanzar.</p><div class="footer-meta"><span>© <span id="year"></span> DC-LINUX</span><span>AMD64 / RASPBERRY PI / DC LAB</span></div></footer>
+    <footer class="site-footer section-pad"><a class="brand" href="#inicio"><img class="brand-logo" src="assets/lucy-dc-emblem.webp" srcset="assets/lucy-dc-emblem-256.webp 256w, assets/lucy-dc-emblem.webp 496w" sizes="42px" alt="Emblema DC suministrado por Lucy" /><span class="brand-copy"><strong>DC-LINUX</strong><small>EDICIÓN LIVE</small></span></a><p>Construido sobre Debian. Diseñado para avanzar.</p><div class="footer-meta"><span>© <span id="year"></span> DC-LINUX</span><span>AMD64 / RASPBERRY PI / DC LAB</span></div></footer>
     <script src="script.js"></script>
   </body>
 </html>

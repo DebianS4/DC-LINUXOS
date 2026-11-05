@@ -37,6 +37,7 @@ class SiteParser(HTMLParser):
         self.release_downloads: set[str] = set()
         self.release_sidecars: set[str] = set()
         self.visible_hashes: list[str] = []
+        self.local_resources: list[str] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         attributes = {name.lower(): value or "" for name, value in attrs}
@@ -68,6 +69,12 @@ class SiteParser(HTMLParser):
 
         if tag == "img" and attributes.get("src"):
             self._check_local_resource("image src", attributes["src"])
+
+        if tag in {"img", "source"} and attributes.get("srcset"):
+            for candidate in attributes["srcset"].split(","):
+                tokens = candidate.strip().split()
+                if tokens:
+                    self._check_local_resource(f"{tag} srcset", tokens[0])
 
         if tag == "link" and attributes.get("href"):
             self._check_local_resource("link href", attributes["href"])
@@ -115,6 +122,8 @@ class SiteParser(HTMLParser):
         parsed = urlsplit(value)
         if parsed.scheme or parsed.netloc or value.startswith("/") or ".." in Path(parsed.path).parts:
             self.errors.append(f"{label} must be a same-origin relative path: {value}")
+        else:
+            self.local_resources.append(parsed.path)
 
 
 def parse_csp(content: str) -> dict[str, list[str]]:
@@ -138,7 +147,7 @@ def main() -> int:
         print(f"Build artifact directory not found: {artifact}", file=sys.stderr)
         return 1
 
-    expected_root = {"assets", "index.html", "styles.css", "script.js", "favicon.ico"}
+    expected_root = {"assets", "index.html", "styles.css", "script.js", "favicon.ico", "favicon.svg"}
     actual_root = {entry.name for entry in artifact.iterdir()}
     for name in sorted(expected_root - actual_root):
         errors.append(f"Required build output is missing: {name}")
@@ -152,6 +161,15 @@ def main() -> int:
         parser.feed(source)
         parser.close()
         errors.extend(parser.errors)
+        for resource in parser.local_resources:
+            resource_path = (artifact / resource).resolve()
+            try:
+                resource_path.relative_to(artifact.resolve())
+            except ValueError:
+                errors.append(f"Local resource escapes the build artifact: {resource}")
+                continue
+            if not resource_path.is_file():
+                errors.append(f"Local resource is missing from the build artifact: {resource}")
 
         if parser.referrer_policy != "no-referrer":
             errors.append("The document must retain the no-referrer policy.")
