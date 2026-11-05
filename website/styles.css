@@ -395,6 +395,18 @@ h1, h2, h3, p { margin-top: 0; }.hero h1 { margin: 0; font: 500 clamp(58px, 8.1v
 .pc-download-checksum, .pc-download-release { grid-column: 1 / -1; }
 .pc-download-release { margin-top: -3px; }
 
+.pc-next-edition { display: grid; grid-template-columns: 46px minmax(0, 1fr); align-items: center; gap: 16px; margin: 0 0 18px; padding: 15px 17px; border: 1px dashed rgba(91, 196, 255, .42); border-left: 3px solid var(--blue); border-radius: 5px; background: radial-gradient(ellipse at 0% 50%, rgba(27, 111, 193, .16), transparent 58%), linear-gradient(145deg, rgba(7, 13, 23, .9), rgba(3, 6, 11, .96)); }
+.pc-next-edition .future-iso-mark { margin: 0; border-color: rgba(91, 196, 255, .5); color: var(--blue-bright); }
+.pc-next-edition .pi-download-status.is-planned { margin: 0 0 8px; border-color: rgba(91, 196, 255, .36); background: rgba(91, 196, 255, .06); color: var(--blue-bright); }
+.pc-next-edition .pi-download-status.is-planned > span { background: var(--blue-bright); box-shadow: 0 0 9px rgba(91, 196, 255, .35); }
+.pc-next-edition h4 { margin: 0 0 5px; color: var(--white); font: 500 17px/1.2 var(--display); letter-spacing: -.02em; }
+.pc-next-edition p:last-child { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.65; }
+@media (max-width: 650px) {
+  .pc-next-edition { grid-template-columns: 38px minmax(0, 1fr); gap: 11px; padding: 12px; }
+  .pc-next-edition .future-iso-mark { width: 38px; height: 38px; font-size: 26px; }
+  .pc-next-edition .pi-download-status.is-planned { font-size: 7px; }
+}
+
 .pi4-desktop-card {
   border-color: rgba(255, 83, 112, .42);
   border-left: 3px solid var(--red);
