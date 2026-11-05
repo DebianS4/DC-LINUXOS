@@ -42,6 +42,14 @@ En macOS, usa `shasum -a 256 -c live-image-amd64.hybrid.iso.sha256` para comprob
 copy /b live-image-amd64.hybrid.iso.part00+live-image-amd64.hybrid.iso.part01 live-image-amd64.hybrid.iso
 ```
 
+En Windows, valida la ISO en PowerShell contra el sidecar descargado; el resultado debe ser `True`:
+
+```powershell
+$expected = ((Get-Content .\live-image-amd64.hybrid.iso.sha256 -Raw) -split '\s+')[0]
+$actual = (Get-FileHash .\live-image-amd64.hybrid.iso -Algorithm SHA256).Hash
+$actual -eq $expected
+```
+
 SHA-256 esperado para la ISO reconstruida:
 
 ```text
@@ -69,5 +77,3 @@ Las imágenes y sus checksums están enlazados en la [página unificada de desca
 - **Pi 4 · escritorio:** imagen ARM64 disponible en el [release de escritorio](https://github.com/DebianS4/DC-LINUXOS/releases/tag/rpi4-desktop-2026.11.04).
 
 Los checksums permiten comparar cada archivo con el valor publicado; no sustituyen una firma digital ni prueban por sí solos la autoría del archivo.
-
-<sub>Repositorio relacionado: [dcg0/DC-linux-OS](https://github.com/dcg0/DC-linux-OS)</sub>
