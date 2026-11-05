@@ -28,6 +28,24 @@ jobs:
       - name: Build static website
         working-directory: website
         run: sh build.sh
+      - name: Test preview server route policy
+        run: python3 website/check_preview_server.py
+      - name: Verify Pages artifact
+        run: |
+          test -s website/dist/index.html
+          test -s website/dist/styles.css
+          test -s website/dist/script.js
+          test -s website/dist/favicon.ico
+          test -s website/dist/favicon.svg
+          test -s website/dist/manifest.webmanifest
+          test -s website/dist/assets/favicon-16x16.png
+          test -s website/dist/assets/favicon-32x32.png
+          test -s website/dist/assets/favicon-48x48.png
+          test -s website/dist/assets/apple-touch-icon.png
+          test -s website/dist/assets/pwa-192x192.png
+          test -s website/dist/assets/pwa-512x512.png
+          test -s website/dist/assets/rpi-zero-hero-v2.webp
+          test -s website/dist/assets/rpi-pi45-download-v2.webp
       - name: Verify security policy and download links
         run: python3 website/check_security.py website/dist
       - name: Upload Pages artifact
@@ -36,6 +54,7 @@ jobs:
           path: website/dist
 
   deploy:
+    if: github.ref == 'refs/heads/main'
     permissions:
       pages: write
       id-token: write

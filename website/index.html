@@ -190,7 +190,11 @@
             </aside>
             <ol class="guide-steps">
               <li><strong>Descarga las dos partes y el checksum.</strong> Guarda juntos <code>live-image-amd64.hybrid.iso.part00</code>, <code>live-image-amd64.hybrid.iso.part01</code> y <code>live-image-amd64.hybrid.iso.sha256</code>.</li>
-              <li><strong>Une y verifica la ISO</strong> desde esa carpeta con Linux, macOS o WSL:<code class="guide-code">cat live-image-amd64.hybrid.iso.part00 live-image-amd64.hybrid.iso.part01 &gt; live-image-amd64.hybrid.iso</code>Comprueba el checksum con <code>sha256sum -c live-image-amd64.hybrid.iso.sha256</code> en Linux/WSL o <code>shasum -a 256 -c live-image-amd64.hybrid.iso.sha256</code> en macOS.<span class="guide-hash">SHA-256 esperado: <code>94e3e87f82210501c812ad7a3b062ff6620eee5e56c07cdf192542463b9d9e47</code></span></li>
+              <li><strong>Une y verifica la ISO</strong> desde esa carpeta con Linux, macOS o WSL:
+                <code class="guide-code">cat live-image-amd64.hybrid.iso.part00 live-image-amd64.hybrid.iso.part01 &gt; live-image-amd64.hybrid.iso</code>
+                <span class="guide-checksum-instruction">Comprueba el checksum con <code>sha256sum -c live-image-amd64.hybrid.iso.sha256</code> en Linux/WSL o <code>shasum -a 256 -c live-image-amd64.hybrid.iso.sha256</code> en macOS.</span>
+                <span class="guide-hash">SHA-256 esperado: <code>94e3e87f82210501c812ad7a3b062ff6620eee5e56c07cdf192542463b9d9e47</code></span>
+              </li>
               <li><strong>Graba la ISO en una memoria USB</strong> con una herramienta de escritura de imágenes. Reinicia el PC, elige arrancar desde USB y prueba la sesión Live o inicia el instalador.</li>
             </ol>
             <p class="guide-warning">La grabación borra la unidad USB seleccionada. Revisa dos veces el destino antes de escribir.</p>
@@ -371,7 +375,7 @@ xz -dk DC-LINUX-Pi4-Pi5-Minimal.img.xz</code></pre></li>
       </section>
     </main>
 
-    <footer class="site-footer section-pad"><a class="brand" href="#inicio"><img class="brand-logo" src="assets/lucy-dc-emblem.webp" srcset="assets/lucy-dc-emblem-256.webp 256w, assets/lucy-dc-emblem.webp 496w" sizes="42px" alt="Emblema DC suministrado por Lucy" /><span class="brand-copy"><strong>DC-LINUX</strong><small>EDICIÓN LIVE</small></span></a><p>Construido sobre Debian. Diseñado para avanzar.</p><div class="footer-meta"><span>© <span id="year"></span> DC-LINUX</span><span>AMD64 / RASPBERRY PI / DC LAB</span><span><a href="https://github.com/dcg0/DC-linux-OS" target="_blank" rel="noopener noreferrer">Proyecto relacionado: DC-linux-OS</a></span></div></footer>
+    <footer class="site-footer section-pad"><a class="brand" href="#inicio"><img class="brand-logo" src="assets/lucy-dc-emblem.webp" srcset="assets/lucy-dc-emblem-256.webp 256w, assets/lucy-dc-emblem.webp 496w" sizes="42px" alt="Emblema DC suministrado por Lucy" /><span class="brand-copy"><strong>DC-LINUX</strong><small>EDICIÓN LIVE</small></span></a><p>Construido sobre Debian. Diseñado para avanzar.</p><div class="footer-meta"><span>© <span id="year"></span> DC-LINUX</span><span>AMD64 / RASPBERRY PI / DC LAB</span></div></footer>
     <script src="script.js"></script>
   </body>
 </html>
