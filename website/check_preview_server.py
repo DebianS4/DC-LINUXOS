@@ -70,8 +70,23 @@ def main() -> int:
         expect(headers.get("x-frame-options") == "DENY", "X-Frame-Options DENY is required.")
         expect("frame-ancestors 'none'" in headers.get("content-security-policy", ""), "CSP must block framing.")
 
-        for path in ("/assets/dc-linux-logo.webp", "/manus-routes.json", "/favicon.svg"):
+        for path in ("/assets/dc-linux-logo.webp", "/manus-routes.json"):
             expect(request(port, path)[0] == 200, f"Public route must work: {path}")
+        icon_resources = {
+            "/favicon.ico": "image/x-icon",
+            "/favicon.svg": "image/svg+xml",
+            "/manifest.webmanifest": "application/manifest+json",
+            "/assets/favicon-16x16.png": "image/png",
+            "/assets/favicon-32x32.png": "image/png",
+            "/assets/favicon-48x48.png": "image/png",
+            "/assets/apple-touch-icon.png": "image/png",
+            "/assets/pwa-192x192.png": "image/png",
+            "/assets/pwa-512x512.png": "image/png",
+        }
+        for path, content_type in icon_resources.items():
+            status, headers, body = request(port, path)
+            expect(status == 200 and body, f"Icon resource must load: {path}")
+            expect(headers.get("content-type", "").startswith(content_type), f"Unexpected Content-Type for {path}")
         for path in ("/server.js", "/package.json"):
             expect(request(port, path)[0] == 404, f"Source/config route must not be served: {path}")
         for path in ("/assets/%2e%2e/server.js", "/%2e%2e/README.md"):

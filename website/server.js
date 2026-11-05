@@ -9,12 +9,13 @@ const publicRoot = resolve(siteRoot, 'public');
 const manifestPath = resolve(publicRoot, 'manus-routes.json');
 const port = Number(process.env.PORT || 3000);
 const host = process.env.HOST || '127.0.0.1';
-const rootFiles = new Set(['index.html', 'styles.css', 'script.js', 'favicon.ico', 'favicon.svg']);
+const rootFiles = new Set(['index.html', 'styles.css', 'script.js', 'favicon.ico', 'favicon.svg', 'manifest.webmanifest']);
 const types = {
   '.html': 'text/html; charset=utf-8',
   '.css': 'text/css; charset=utf-8',
   '.js': 'text/javascript; charset=utf-8',
   '.json': 'application/json; charset=utf-8',
+  '.webmanifest': 'application/manifest+json; charset=utf-8',
   '.ico': 'image/x-icon',
   '.png': 'image/png',
   '.jpg': 'image/jpeg',
@@ -26,7 +27,7 @@ const securityHeaders = {
   'Referrer-Policy': 'no-referrer',
   'X-Frame-Options': 'DENY',
   'Cross-Origin-Resource-Policy': 'same-origin',
-  'Content-Security-Policy': "default-src 'none'; base-uri 'self'; object-src 'none'; form-action 'none'; frame-src 'none'; frame-ancestors 'none'; worker-src 'none'; media-src 'none'; manifest-src 'none'; img-src 'self' data:; script-src 'self'; style-src 'self'; style-src-attr 'none'; font-src 'self'; connect-src 'none'; upgrade-insecure-requests",
+  'Content-Security-Policy': "default-src 'none'; base-uri 'self'; object-src 'none'; form-action 'none'; frame-src 'none'; frame-ancestors 'none'; worker-src 'none'; media-src 'none'; manifest-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self'; style-src-attr 'none'; font-src 'self'; connect-src 'none'; upgrade-insecure-requests",
   'Cache-Control': 'no-store',
 };
 

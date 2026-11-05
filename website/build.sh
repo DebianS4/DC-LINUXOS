@@ -4,6 +4,7 @@ set -eu
 rm -rf dist
 mkdir -p dist/assets
 cp index.html styles.css script.js dist/
+cp manifest.webmanifest dist/
 cp favicon.ico dist/
 cp favicon.svg dist/
 cp assets/* dist/assets/
