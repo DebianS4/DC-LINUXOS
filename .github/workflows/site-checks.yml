@@ -3,9 +3,6 @@ name: Site checks
 on:
   pull_request:
     branches: [main]
-    paths:
-      - "website/**"
-      - ".github/workflows/site-checks.yml"
   push:
     branches: [main]
     paths:
