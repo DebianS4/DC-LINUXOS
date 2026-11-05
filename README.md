@@ -69,3 +69,5 @@ Las imágenes y sus checksums están enlazados en la [página unificada de desca
 - **Pi 4 · escritorio:** imagen ARM64 disponible en el [release de escritorio](https://github.com/DebianS4/DC-LINUXOS/releases/tag/rpi4-desktop-2026.11.04).
 
 Los checksums permiten comparar cada archivo con el valor publicado; no sustituyen una firma digital ni prueban por sí solos la autoría del archivo.
+
+<sub>Repositorio relacionado: [dcg0/DC-linux-OS](https://github.com/dcg0/DC-linux-OS)</sub>
