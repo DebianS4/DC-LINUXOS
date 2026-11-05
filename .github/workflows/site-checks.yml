@@ -38,6 +38,7 @@ jobs:
           test -s website/dist/styles.css
           test -s website/dist/script.js
           test -s website/dist/favicon.ico
+          test -s website/dist/favicon.svg
           test -s website/dist/assets/favicon-16x16.png
           test -s website/dist/assets/favicon-32x32.png
           test -s website/dist/assets/apple-touch-icon.png
